@@ -10,6 +10,7 @@
             --bg-color: #0b0e11;
             --card-bg: #161b22;
             --accent-color: #00d4ff; /* Database Cyan */
+            --workshop-color: #ffcc00; /* UTeM Workshop Gold */
             --text-main: #e6edf3;
             --text-dim: #8b949e;
         }
@@ -22,209 +23,231 @@
             line-height: 1.6;
         }
 
-        /* Hero Section */
         header {
-            height: 80vh;
+            height: 60vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             text-align: center;
-            background: linear-gradient(to bottom, rgba(11, 14, 17, 0), var(--bg-color)), url('images/bg.jpg');
+            background: linear-gradient(to bottom, rgba(11, 14, 17, 0.4), var(--bg-color)), url('images/bg.jpg');
             background-size: cover;
+            background-position: center;
         }
 
         .profile-img {
-            width: 180px;
-            height: 180px;
+            width: 150px;
+            height: 150px;
             border-radius: 50%;
             border: 3px solid var(--accent-color);
             margin-bottom: 20px;
             object-fit: cover;
+            box-shadow: 0 0 20px rgba(0, 212, 255, 0.3);
         }
 
-        h1 { font-family: 'Orbitron', sans-serif; font-size: 3rem; margin: 0; color: var(--accent-color); }
-        .tagline { font-size: 1.2rem; color: var(--text-dim); margin-top: 10px; }
+        h1 { font-family: 'Orbitron', sans-serif; font-size: 2.5rem; margin: 0; color: var(--accent-color); }
+        .tagline { font-size: 1rem; color: var(--text-dim); margin-top: 10px; text-transform: uppercase; letter-spacing: 2px; }
 
-        /* The 5 Blocks Container */
-        .container { max-width: 1000px; margin: 0 auto; padding: 40px 20px; }
+        /* The Structured Grid Layout */
+        .container { 
+            max-width: 1200px; 
+            margin: 0 auto; 
+            padding: 40px 20px;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr); /* 2 blocks next to each other */
+            gap: 30px;
+        }
 
         .block {
             background: var(--card-bg);
             border: 1px solid #30363d;
             border-radius: 12px;
-            padding: 40px;
-            margin-bottom: 60px;
-            transition: 0.3s;
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            transition: 0.3s ease;
         }
 
-        .block:hover { border-color: var(--accent-color); box-shadow: 0 0 20px rgba(0, 212, 255, 0.1); }
+        .block:hover { border-color: var(--accent-color); transform: translateY(-5px); }
+        
+        /* Workshop Specific Styling */
+        .workshop-block { border-color: var(--workshop-color); }
+        .workshop-block .block-num { color: var(--workshop-color); }
 
         .block-header { 
             display: flex; 
             align-items: center; 
-            gap: 20px; 
+            gap: 15px; 
             border-bottom: 1px solid #30363d; 
-            padding-bottom: 20px; 
+            padding-bottom: 15px; 
             margin-bottom: 20px;
         }
 
-        .block-num { font-family: 'Orbitron'; color: var(--accent-color); font-size: 2rem; opacity: 0.5; }
-        h2 { font-family: 'Orbitron'; margin: 0; font-size: 1.5rem; text-transform: uppercase; }
+        .block-num { font-family: 'Orbitron'; color: var(--accent-color); font-size: 1.5rem; opacity: 0.7; }
+        h2 { font-family: 'Orbitron'; margin: 0; font-size: 1.1rem; text-transform: uppercase; }
 
-        /* Storytelling Elements */
-        .story-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-top: 20px; }
-        .visual-area img { width: 100%; border-radius: 8px; border: 1px solid #30363d; }
+        .visual-area img { 
+            width: 100%; 
+            height: 200px; 
+            object-fit: cover; 
+            border-radius: 8px; 
+            margin-bottom: 20px;
+            border: 1px solid #30363d;
+        }
         
-        .content-area h4 { color: var(--accent-color); margin-bottom: 5px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px; }
-        .content-area p { margin-bottom: 20px; color: var(--text-main); font-weight: 300; }
+        .content-area h4 { color: var(--accent-color); margin-bottom: 5px; text-transform: uppercase; font-size: 0.8rem; letter-spacing: 1px; }
+        .workshop-block .content-area h4 { color: var(--workshop-color); }
+        .content-area p { margin-bottom: 15px; color: var(--text-main); font-size: 0.9rem; font-weight: 300; }
 
         .key-takeaway { 
-            background: rgba(0, 212, 255, 0.05); 
-            padding: 15px; 
-            border-left: 4px solid var(--accent-color); 
+            background: rgba(255, 255, 255, 0.03); 
+            padding: 12px; 
+            border-left: 3px solid var(--accent-color); 
             font-style: italic;
+            font-size: 0.85rem;
+            margin-top: auto; /* Pushes to bottom of card */
         }
+        .workshop-block .key-takeaway { border-left-color: var(--workshop-color); }
 
-        footer { text-align: center; padding: 60px; color: var(--text-dim); border-top: 1px solid #30363d; }
+        footer { text-align: center; padding: 60px; color: var(--text-dim); border-top: 1px solid #30363d; grid-column: span 2; }
+        
         .btn { 
-            display: inline-block; 
-            padding: 10px 25px; 
+            text-align: center;
+            padding: 10px; 
             background: var(--accent-color); 
             color: #000; 
             text-decoration: none; 
             font-weight: bold; 
             border-radius: 5px;
+            font-size: 0.8rem;
             margin-top: 10px;
+        }
+
+        /* Responsive: Stack on mobile */
+        @media (max-width: 900px) {
+            .container { grid-template-columns: 1fr; }
+            footer { grid-column: span 1; }
         }
     </style>
 </head>
 <body>
 
     <header>
-        <img src="images\1G3A9838.jpg" alt="Sufiana Adlin" class="profile-img">
+        <img src="images/1G3A9838.jpg" alt="Sufiana Adlin" class="profile-img">
         <h1>SUFIANA ADLIN</h1>
         <p class="tagline">Bachelor of Computer Science (Database Management)</p>
-        <p style="max-width: 600px; color: var(--text-dim);">"Education is the most powerful weapon which you can use to change the world."</p>
+        <p style="max-width: 600px; color: var(--text-dim); font-size: 0.9rem; padding: 0 20px;">"Education is the most powerful weapon which you can use to change the world."</p>
     </header>
 
     <div class="container">
 
-        <!-- BLOCK 1: BACKGROUND STUDIES -->
+        <!-- 01: BACKGROUND STUDIES -->
         <section class="block">
             <div class="block-header">
                 <div class="block-num">01</div>
                 <h2>Background Studies</h2>
             </div>
-            <div class="story-grid">
-                <div class="visual-area">
-                    <img src="images\P(5090).JPG" alt="Graduation">
-                </div>
-                <div class="content-area">
-                    <h4>The Objective</h4>
-                    <p>To build a foundational understanding of Information Technology at SMK Seskyen 24(2) and Polytechnic Balik Pulau.</p>
-                    <h4>The Hurdles</h4>
-                    <p>Transitioning from general academic studies to technical Digital Technology was a steep learning curve requiring high adaptability.</p>
-                    <div class="key-takeaway">
-                        "Key Takeaway: Foundational logic is the root of all advanced system design."
-                    </div>
-                </div>
+            <div class="visual-area"><img src="images/P(5090).JPG" alt="Graduation"></div>
+            <div class="content-area">
+                <h4>Objective</h4>
+                <p>Establishing IT foundations at SMK Seskyen 24(2) and Polytechnic Balik Pulau.</p>
+                <h4>Hurdles</h4>
+                <p>Transitioning into technical Digital Technology required rapid adaptation to logic-based thinking.</p>
+                <div class="key-takeaway">"Takeaway: Logic is the root of all advanced system design."</div>
             </div>
         </section>
 
-        <!-- BLOCK 2: FYP DIPLOMA -->
+        <!-- 02: DIPLOMA FYP -->
         <section class="block">
             <div class="block-header">
                 <div class="block-num">02</div>
                 <h2>Diploma FYP: Local RDBMS</h2>
             </div>
-            <div class="story-grid">
-                <div class="visual-area">
-                    <img src="images\IMG-20230805-WA0009.jpg" alt="Database Schema">
-                </div>
-                <div class="content-area">
-                    <h4>The Objective</h4>
-                    <p>Architecting a robust local management system using XAMPP, PHP, and MySQL.</p>
-                    <h4>Key Decision</h4>
-                    <p>I chose a 3rd Normal Form (3NF) approach to prevent data redundancy, even though it increased query complexity.</p>
-                    <div class="key-takeaway">
-                        "Key Takeaway: Data integrity should never be sacrificed for temporary coding speed."
-                    </div>
-                </div>
+            <div class="visual-area"><img src="images/IMG-20230805-WA0009.jpg" alt="Database Schema"></div>
+            <div class="content-area">
+                <h4>Hurdles</h4>
+                <p>Manually architecting a PHP/MySQL system to handle redundant data without cloud tools.</p>
+                <h4>Takeaway</h4>
+                <div class="key-takeaway">"Data integrity should never be sacrificed for temporary coding speed."</div>
             </div>
         </section>
 
-        <!-- BLOCK 3: DIPLOMA INTERNSHIP -->
+        <!-- 03: DIPLOMA INTERNSHIP -->
         <section class="block">
             <div class="block-header">
                 <div class="block-num">03</div>
                 <h2>Diploma Internship</h2>
             </div>
-            <div class="story-grid">
-                <div class="visual-area">
-                    <img src="images\IMG-20230822-WA0035.jpg" alt="Internship Experience">
-                </div>
-                <div class="content-area">
-                    <h4>The Objective</h4>
-                    <p>Applying classroom database theory to professional environments and user requirements.</p>
-                    <h4>The Hurdles</h4>
-                    <p>Managing legacy data that was poorly structured. I had to perform data cleaning without disrupting the workflow.</p>
-                    <div class="key-takeaway">
-                        "Key Takeaway: Professional environments require communication as much as technical skill."
-                    </div>
-                </div>
+            <div class="visual-area"><img src="images/IMG-20230822-WA0035.jpg" alt="Internship"></div>
+            <div class="content-area">
+                <h4>Hurdles</h4>
+                <p>Cleaning legacy "messy" data into a structured format without disrupting daily business operations.</p>
+                <div class="key-takeaway">"Key Takeaway: Professional data handling requires extreme precision."</div>
             </div>
         </section>
 
-        <!-- BLOCK 4: FYP DEGREE (LESBOT) -->
-        <section class="block">
+        <!-- 04: WORKSHOP 1 (UTeM) -->
+        <section class="block workshop-block">
             <div class="block-header">
                 <div class="block-num">04</div>
-                <h2>Degree FYP: LESBOT (Cloud)</h2>
+                <h2>Workshop 1: Individual Core</h2>
             </div>
-            <div class="story-grid">
-                <div class="visual-area">
-                    <img src="images\LESBOT.jpg" alt="LESBOT Azure">
-                </div>
-                <div class="content-area">
-                    <h4>The Objective</h4>
-                    <p>Designing a high-security sustainability system with Azure SQL and PHP Audit Trails.</p>
-                    <h4>The Key Decisions</h4>
-                    <p>I implemented "Administrative Audit Trails" to ensure every database change was tied to a user ID for accountability.</p>
-                    <a href="https://lesbot-lestari-bmdahbahbbeeb2f9.southeastasia-01.azurewebsites.net/" class="btn" target="_blank">Verify Azure Deployment</a>
-                    <div class="key-takeaway">
-                        "Key Takeaway: In the cloud, security and auditability are the highest priorities."
-                    </div>
-                </div>
+            <div class="visual-area"><img src="images/workshop1.jpg" alt="Workshop 1"></div>
+            <div class="content-area">
+                <h4>Objective</h4>
+                <p>The UTeM Survival Test: Proving individual technical competence by building a full SDLC module.</p>
+                <div class="key-takeaway">"Takeaway: Mastering the SDLC is the difference between a coder and an engineer."</div>
             </div>
         </section>
 
-        <!-- BLOCK 5: CERTIFICATES -->
-        <section class="block">
+        <!-- 05: WORKSHOP 2 (UTeM) -->
+        <section class="block workshop-block">
             <div class="block-header">
                 <div class="block-num">05</div>
-                <h2>Professional Credentials</h2>
+                <h2>Workshop 2: Group Simulation</h2>
             </div>
-            <div class="story-grid">
-                <div class="visual-area">
-                    <img src="images\credentials.jpg" alt="IBM Badge">
-                </div>
-                <div class="content-area">
-                    <h4>The Objective</h4>
-                    <p>Validating my expertise through industry-standard providers like IBM and Credly.</p>
-                    <h4>Key Takeaway</h4>
-                    <p>Continuous learning is essential in the fast-paced world of Database Management.</p>
-                    <a href="https://www.linkedin.com/in/sufiana-adlin-571a58265/" class="btn" target="_blank">Connect via LinkedIn</a>
+            <div class="visual-area"><img src="images/workshop2.jpg" alt="Workshop 2"></div>
+            <div class="content-area">
+                <h4>Hard Work</h4>
+                <p>Operating as a "Software House." I acted as the DB Lead, using Git to synchronize queries across the team.</p>
+                <div class="key-takeaway">"Takeaway: Synergy in a team beats individual brilliance every time."</div>
+            </div>
+        </section>
+
+        <!-- 06: DEGREE FYP (LESBOT) -->
+        <section class="block">
+            <div class="block-header">
+                <div class="block-num">06</div>
+                <h2>Degree FYP: LESBOT (Cloud)</h2>
+            </div>
+            <div class="visual-area"><img src="images/LESBOT.jpg" alt="LESBOT Azure"></div>
+            <div class="content-area">
+                <h4>Key Decisions</h4>
+                <p>Implementing Administrative Audit Trails on Azure SQL to ensure data accountability.</p>
+                <a href="https://lesbot-lestari-bmdahbahbbeeb2f9.southeastasia-01.azurewebsites.net/" class="btn" target="_blank">Verify Azure Project</a>
+                <div class="key-takeaway">"Takeaway: Security and auditability are the highest cloud priorities."</div>
+            </div>
+        </section>
+
+        <!-- 07: CERTIFICATES -->
+        <section class="block" style="grid-column: span 2;">
+            <div class="block-header">
+                <div class="block-num">07</div>
+                <h2>Credentials & LinkedIn</h2>
+            </div>
+            <div style="display: flex; gap: 20px; align-items: center;">
+                <div class="visual-area" style="flex: 1;"><img src="images/credentials.jpg" alt="IBM Badge"></div>
+                <div class="content-area" style="flex: 1;">
+                    <p>Validating expertise through industry leaders like IBM and Credly. Continuous learning is my core database strategy.</p>
+                    <a href="https://www.linkedin.com/in/sufiana-adlin-571a58265/" class="btn" target="_blank" style="display: block;">Visit LinkedIn for Full Details</a>
                 </div>
             </div>
         </section>
 
+        <footer>
+            <p>&copy; 2026 Sufiana Adlin | FTMK UTeM Database Management Specialist</p>
+            <p>Built with GitHub Student Developer Pack | Hosted on GitHub Pages</p>
+        </footer>
     </div>
-
-    <footer>
-        <p>&copy; 2026 Sufiana Adlin | Bachelor of Computer Science (Database Management)</p>
-        <p>Built with GitHub Student Benefits | Secured with SSL</p>
-    </footer>
-
 </body>
 </html>
