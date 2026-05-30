@@ -1,191 +1,230 @@
-<!DOCTYPE HTML>
-<!--
-	Dimension by HTML5 UP | Customized for Sufiana Adlin
-	Vision: High-Impact Database Management Portfolio
--->
-<html>
-	<head>
-		<title>Sufiana Adlin | Database Architect</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-		<style>
-			/* Aesthetic Database Vibe Customization */
-			#header .logo { border: 2px solid #00d4ff; color: #00d4ff; box-shadow: 0 0 15px #00d4ff; }
-			h1, h2, b, strong, .major { color: #00d4ff !important; }
-			.button.primary { background-color: #00d4ff !important; color: #1b1f22 !important; font-weight: bold; border: none; }
-			.image.main img { border-radius: 10px; border: 1px solid #333; }
-			#header .content .inner p { letter-spacing: 0.1em; text-transform: uppercase; font-size: 0.75em; }
-			
-			/* Typewriter Effect Styling */
-			#typewriter { color: #00d4ff; font-weight: bold; border-right: 2px solid #00d4ff; padding-right: 5px; animation: blink 0.7s infinite; }
-			@keyframes blink { 50% { border-color: transparent; } }
-		</style>
-	</head>
-	<body class="is-preload">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sufiana Adlin | Database Architect Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #0b0e11;
+            --card-bg: #161b22;
+            --accent-color: #00d4ff; /* Database Cyan */
+            --text-main: #e6edf3;
+            --text-dim: #8b949e;
+        }
 
-		<!-- Wrapper -->
-			<div id="wrapper">
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            line-height: 1.6;
+        }
 
-				<!-- Header -->
-					<header id="header">
-						<div class="logo">
-							<span class="icon fa-database"></span>
-						</div>
-						<div class="content">
-							<div class="inner">
-								<p id="quote-vibe">Building the silent logic that powers the world.</p>
-								<h1>SUFIANA ADLIN</h1>
-								<p><span id="typewriter"></span></p>
-							</div>
-						</div>
-						<nav>
-							<ul>
-								<li><a href="#intro">Identity</a></li>
-								<li><a href="#work">Hardwork</a></li>
-								<li><a href="#about">Credentials</a></li>
-								<li><a href="#contact">Contact</a></li>
-							</ul>
-						</nav>
-					</header>
+        /* Hero Section */
+        header {
+            height: 80vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background: linear-gradient(to bottom, rgba(11, 14, 17, 0), var(--bg-color)), url('images/bg.jpg');
+            background-size: cover;
+        }
 
-				<!-- Main -->
-					<div id="main">
+        .profile-img {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            border: 3px solid var(--accent-color);
+            margin-bottom: 20px;
+            object-fit: cover;
+        }
 
-						<!-- Identity (The Quick Background Study) -->
-							<article id="intro">
-								<h2 class="major">Identity</h2>
-								<span class="image main"><img src="images/me.jpg" alt="Sufiana Adlin" /></span>
-								<p><b>"In a world of chaos, I build the structure."</b></p>
-								<p>I am a <b>Bachelor of Computer Science (Database Management)</b> student. My passion lies in architecting data integrity and ensuring system transparency. I specialize in bridging technical backend complexity with scalable business solutions.</p>
-								
-								<h3>Background Study</h3>
-								<ul class="alt">
-									<li><b>Degree:</b> Bachelor of Computer Science (Database Management)</li>
-									<li><b>Diploma:</b> Computer Science Graduate</li>
-									<li><b>Expertise:</b> Relational Normalization (3NF), SQL Optimization, Audit Trails.</li>
-								</ul>
-							</article>
+        h1 { font-family: 'Orbitron', sans-serif; font-size: 3rem; margin: 0; color: var(--accent-color); }
+        .tagline { font-size: 1.2rem; color: var(--text-dim); margin-top: 10px; }
 
-						<!-- Hardwork (The Pop-up Details) -->
-							<article id="work">
-								<h2 class="major">Hardwork</h2>
-								
-								<h3>Degree FYP: LESBOT (Azure Cloud)</h3>
-								<span class="image main"><img src="images/lesbot-preview.jpg" alt="LESBOT Dashboard" /></span>
-								<p>A high-level sustainability management system hosted on <b>Microsoft Azure</b>. This project is the culmination of my degree studies in database security.</p>
-								<ul>
-									<li><b>Admin Audit Trail:</b> Designed a relational logging system to track all administrative changes for 100% accountability.</li>
-									<li><b>Penalty Logic:</b> Implemented complex SQL triggers and PHP logic for behavioral tracking.</li>
-								</ul>
-								<a href="https://lesbot-lestari-bmdahbahbbeeb2f9.southeastasia-01.azurewebsites.net/" class="button primary" target="_blank">Launch Live Project</a>
-								
-								<hr />
+        /* The 5 Blocks Container */
+        .container { max-width: 1000px; margin: 0 auto; padding: 40px 20px; }
 
-								<h3>Diploma FYP: Local RDBMS</h3>
-								<p>Developed on a <b>XAMPP/PHP/MySQL</b> environment. This project focused on the fundamentals of database architecture and CRUD efficiency.</p>
-								<ul>
-									<li><b>Relational Schema:</b> Optimized 15+ tables ensuring zero data redundancy.</li>
-									<li><b>Efficiency:</b> Reduced data retrieval time through strategic indexing.</li>
-								</ul>
-							</article>
+        .block {
+            background: var(--card-bg);
+            border: 1px solid #30363d;
+            border-radius: 12px;
+            padding: 40px;
+            margin-bottom: 60px;
+            transition: 0.3s;
+        }
 
-						<!-- Credentials (Details & Certificates) -->
-							<article id="about">
-								<h2 class="major">Credentials</h2>
-								<p>Details of my professional journey and technical arsenal.</p>
-								
-								<h3>The Arsenal</h3>
-								<div class="table-wrapper">
-									<table>
-										<thead>
-											<tr><th>Category</th><th>Tools</th></tr>
-										</thead>
-										<tbody>
-											<tr><td>Databases</td><td>MySQL, PostgreSQL, Azure SQL</td></tr>
-											<tr><td>Environments</td><td>XAMPP, Azure Portal, GitHub</td></tr>
-											<tr><td>Coding</td><td>SQL, PHP, Python, HTML/CSS</td></tr>
-										</tbody>
-									</table>
-								</div>
+        .block:hover { border-color: var(--accent-color); box-shadow: 0 0 20px rgba(0, 212, 255, 0.1); }
 
-								<h3>Certifications</h3>
-								<ul>
-									<li><b>Verified Student Developer</b> - GitHub Global Campus</li>
-									<li><b>[Insert Certificate Name 1]</b> - [Year]</li>
-									<li><b>[Insert Certificate Name 2]</b> - [Year]</li>
-								</ul>
-							</article>
+        .block-header { 
+            display: flex; 
+            align-items: center; 
+            gap: 20px; 
+            border-bottom: 1px solid #30363d; 
+            padding-bottom: 20px; 
+            margin-bottom: 20px;
+        }
 
-						<!-- Contact (LinkedIn Connectivity) -->
-							<article id="contact">
-								<h2 class="major">Connectivity</h2>
-								<p>I am open for <b>Degree Internship</b> opportunities where I can apply my Database Management expertise.</p>
-								
-								<ul class="actions stacked">
-									<li><a href="https://www.linkedin.com/in/sufiana-adlin-571a58265/" class="button primary icon brands fa-linkedin-in" target="_blank">Connect on LinkedIn (Full CV)</a></li>
-									<li><a href="mailto:[YOUR_STUDENT_EMAIL]" class="button icon solid fa-envelope">Email Verified Student</a></li>
-								</ul>
+        .block-num { font-family: 'Orbitron'; color: var(--accent-color); font-size: 2rem; opacity: 0.5; }
+        h2 { font-family: 'Orbitron'; margin: 0; font-size: 1.5rem; text-transform: uppercase; }
 
-								<ul class="icons">
-									<li><a href="https://github.com/sufiana-hub" class="icon brands fa-github" target="_blank"><span class="label">GitHub</span></a></li>
-								</ul>
-							</article>
+        /* Storytelling Elements */
+        .story-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-top: 20px; }
+        .visual-area img { width: 100%; border-radius: 8px; border: 1px solid #30363d; }
+        
+        .content-area h4 { color: var(--accent-color); margin-bottom: 5px; text-transform: uppercase; font-size: 0.9rem; letter-spacing: 1px; }
+        .content-area p { margin-bottom: 20px; color: var(--text-main); font-weight: 300; }
 
-					</div>
+        .key-takeaway { 
+            background: rgba(0, 212, 255, 0.05); 
+            padding: 15px; 
+            border-left: 4px solid var(--accent-color); 
+            font-style: italic;
+        }
 
-				<!-- Footer -->
-					<footer id="footer">
-						<p class="copyright">&copy; Sufiana Adlin. Built with GitHub Student Benefits. Hosting: GitHub Pages. Security: SSL/HTTPS.</p>
-					</footer>
+        footer { text-align: center; padding: 60px; color: var(--text-dim); border-top: 1px solid #30363d; }
+        .btn { 
+            display: inline-block; 
+            padding: 10px 25px; 
+            background: var(--accent-color); 
+            color: #000; 
+            text-decoration: none; 
+            font-weight: bold; 
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
 
-			</div>
+    <header>
+        <img src="images/me.jpg" alt="Sufiana Adlin" class="profile-img">
+        <h1>SUFIANA ADLIN</h1>
+        <p class="tagline">Bachelor of Computer Science (Database Management)</p>
+        <p style="max-width: 600px; color: var(--text-dim);">"Education is the most powerful weapon which you can use to change the world."</p>
+    </header>
 
-		<!-- BG -->
-			<div id="bg"></div>
+    <div class="container">
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-			
-			<!-- Typewriter Effect Script -->
-			<script>
-				const textArray = [
-					"Database Architect",
-					"Computer Science Student",
-					"Audit Trail Specialist",
-					"Logic Builder"
-				];
-				let textIdx = 0;
-				let charIdx = 0;
-				let isDeleting = false;
-				const typewriter = document.getElementById("typewriter");
+        <!-- BLOCK 1: BACKGROUND STUDIES -->
+        <section class="block">
+            <div class="block-header">
+                <div class="block-num">01</div>
+                <h2>Background Studies</h2>
+            </div>
+            <div class="story-grid">
+                <div class="visual-area">
+                    <img src="images/me.jpg" alt="Graduation">
+                </div>
+                <div class="content-area">
+                    <h4>The Objective</h4>
+                    <p>To build a foundational understanding of Information Technology at SMK Seskyen 24(2) and Polytechnic Balik Pulau.</p>
+                    <h4>The Hurdles</h4>
+                    <p>Transitioning from general academic studies to technical Digital Technology was a steep learning curve requiring high adaptability.</p>
+                    <div class="key-takeaway">
+                        "Key Takeaway: Foundational logic is the root of all advanced system design."
+                    </div>
+                </div>
+            </div>
+        </section>
 
-				function type() {
-					const currentText = textArray[textIdx];
-					if (isDeleting) {
-						typewriter.textContent = currentText.substring(0, charIdx--);
-					} else {
-						typewriter.textContent = currentText.substring(0, charIdx++);
-					}
+        <!-- BLOCK 2: FYP DIPLOMA -->
+        <section class="block">
+            <div class="block-header">
+                <div class="block-num">02</div>
+                <h2>Diploma FYP: Local RDBMS</h2>
+            </div>
+            <div class="story-grid">
+                <div class="visual-area">
+                    <img src="images/diploma_schema.jpg" alt="Database Schema">
+                </div>
+                <div class="content-area">
+                    <h4>The Objective</h4>
+                    <p>Architecting a robust local management system using XAMPP, PHP, and MySQL.</p>
+                    <h4>Key Decision</h4>
+                    <p>I chose a 3rd Normal Form (3NF) approach to prevent data redundancy, even though it increased query complexity.</p>
+                    <div class="key-takeaway">
+                        "Key Takeaway: Data integrity should never be sacrificed for temporary coding speed."
+                    </div>
+                </div>
+            </div>
+        </section>
 
-					if (!isDeleting && charIdx === currentText.length + 1) {
-						isDeleting = true;
-						setTimeout(type, 1500);
-					} else if (isDeleting && charIdx === 0) {
-						isDeleting = false;
-						textIdx = (textIdx + 1) % textArray.length;
-						setTimeout(type, 500);
-					} else {
-						setTimeout(type, isDeleting ? 50 : 100);
-					}
-				}
-				document.addEventListener("DOMContentLoaded", type);
-			</script>
+        <!-- BLOCK 3: DIPLOMA INTERNSHIP -->
+        <section class="block">
+            <div class="block-header">
+                <div class="block-num">03</div>
+                <h2>Diploma Internship</h2>
+            </div>
+            <div class="story-grid">
+                <div class="visual-area">
+                    <img src="images/internship_work.jpg" alt="Internship Experience">
+                </div>
+                <div class="content-area">
+                    <h4>The Objective</h4>
+                    <p>Applying classroom database theory to professional environments and user requirements.</p>
+                    <h4>The Hurdles</h4>
+                    <p>Managing legacy data that was poorly structured. I had to perform data cleaning without disrupting the workflow.</p>
+                    <div class="key-takeaway">
+                        "Key Takeaway: Professional environments require communication as much as technical skill."
+                    </div>
+                </div>
+            </div>
+        </section>
 
-	</body>
+        <!-- BLOCK 4: FYP DEGREE (LESBOT) -->
+        <section class="block">
+            <div class="block-header">
+                <div class="block-num">04</div>
+                <h2>Degree FYP: LESBOT (Cloud)</h2>
+            </div>
+            <div class="story-grid">
+                <div class="visual-area">
+                    <img src="images/lesbot-preview.jpg" alt="LESBOT Azure">
+                </div>
+                <div class="content-area">
+                    <h4>The Objective</h4>
+                    <p>Designing a high-security sustainability system with Azure SQL and PHP Audit Trails.</p>
+                    <h4>The Key Decisions</h4>
+                    <p>I implemented "Administrative Audit Trails" to ensure every database change was tied to a user ID for accountability.</p>
+                    <a href="https://lesbot-lestari-bmdahbahbbeeb2f9.southeastasia-01.azurewebsites.net/" class="btn" target="_blank">Verify Azure Deployment</a>
+                    <div class="key-takeaway">
+                        "Key Takeaway: In the cloud, security and auditability are the highest priorities."
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- BLOCK 5: CERTIFICATES -->
+        <section class="block">
+            <div class="block-header">
+                <div class="block-num">05</div>
+                <h2>Professional Credentials</h2>
+            </div>
+            <div class="story-grid">
+                <div class="visual-area">
+                    <img src="images/ibm_badge.jpg" alt="IBM Badge">
+                </div>
+                <div class="content-area">
+                    <h4>The Objective</h4>
+                    <p>Validating my expertise through industry-standard providers like IBM and Credly.</p>
+                    <h4>Key Takeaway</h4>
+                    <p>Continuous learning is essential in the fast-paced world of Database Management.</p>
+                    <a href="https://www.linkedin.com/in/sufiana-adlin-571a58265/" class="btn" target="_blank">Connect via LinkedIn</a>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Sufiana Adlin | Bachelor of Computer Science (Database Management)</p>
+        <p>Built with GitHub Student Benefits | Secured with SSL</p>
+    </footer>
+
+</body>
 </html>
