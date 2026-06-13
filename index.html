@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sufiana Adlin | Portfolio</title>
+    <title>Sufiana Adlin | Professional Portfolio</title>
     
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
@@ -25,28 +25,11 @@
             --tag-bg: #f3f4f6;
         }
 
-        body {
-            background-color: var(--bg-white);
-            color: var(--text-main);
-            font-family: 'Inter', sans-serif;
-            line-height: 1.6;
-            overflow-x: hidden;
-        }
+        body { background-color: var(--bg-white); color: var(--text-main); font-family: 'Inter', sans-serif; line-height: 1.6; overflow-x: hidden; }
 
         /* Navbar */
-        .navbar {
-            border-bottom: 1px solid var(--card-border);
-            padding: 1.2rem 0;
-            background: rgba(255,255,255,0.9);
-            backdrop-filter: blur(10px);
-        }
-        .navbar-brand { font-size: 1.5rem; letter-spacing: -1px; }
-        .nav-link {
-            font-weight: 600;
-            color: var(--text-main) !important;
-            margin-left: 1.5rem;
-            font-size: 0.9rem;
-        }
+        .navbar { border-bottom: 1px solid var(--card-border); padding: 1.2rem 0; background: rgba(255,255,255,0.9); backdrop-filter: blur(10px); }
+        .nav-link { font-weight: 600; color: var(--text-main) !important; margin-left: 1.5rem; font-size: 0.9rem; transition: 0.3s; }
         .nav-link:hover { color: var(--accent-blue) !important; }
 
         /* Hero */
@@ -54,94 +37,27 @@
         .hero-label { color: var(--accent-blue); font-weight: 700; font-size: 0.75rem; letter-spacing: 2px; }
         .hero-name { font-size: 5.5rem; font-weight: 800; letter-spacing: -3px; line-height: 0.9; margin: 20px 0; }
         .hero-name span { color: var(--accent-blue); }
-        .location-badge {
-            background: var(--tag-bg);
-            padding: 6px 16px;
-            border-radius: 50px;
-            font-size: 0.8rem;
-            font-weight: 600;
-            display: inline-block;
-        }
-        .profile-img-container {
-            width: 100%;
-            max-width: 400px;
-            aspect-ratio: 1/1;
-            border-radius: 50%;
-            overflow: hidden;
-            border: 12px solid var(--tag-bg);
-            margin-left: auto;
-        }
+        .location-badge { background: var(--tag-bg); padding: 6px 16px; border-radius: 50px; font-size: 0.8rem; font-weight: 600; display: inline-block; }
+        .profile-img-container { width: 100%; max-width: 380px; aspect-ratio: 1/1; border-radius: 50%; overflow: hidden; border: 12px solid var(--tag-bg); margin-left: auto; }
 
         /* Project Cards */
-        .project-card {
-            border: 1px solid var(--card-border);
-            border-radius: 20px;
-            padding: 35px;
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-            height: 100%;
-            background: #fff;
-            position: relative;
-        }
-        .project-card:hover {
-            transform: translateY(-10px);
-            border-color: var(--accent-blue);
-            box-shadow: 0 30px 60px rgba(0,0,0,0.08);
-        }
-        .project-card::after {
-            content: ""; position: absolute; top: 0; left: 0; width: 100%; height: 5px;
-            background: var(--accent-blue); border-radius: 20px 20px 0 0;
-        }
+        .project-card { border: 1px solid var(--card-border); border-radius: 20px; padding: 35px; transition: 0.4s; height: 100%; background: #fff; position: relative; }
+        .project-card:hover { transform: translateY(-10px); border-color: var(--accent-blue); box-shadow: 0 30px 60px rgba(0,0,0,0.08); }
+        .project-card::after { content: ""; position: absolute; top: 0; left: 0; width: 100%; height: 5px; background: var(--accent-blue); border-radius: 20px 20px 0 0; }
+        .workshop-tag { font-size: 0.7rem; font-weight: 800; text-transform: uppercase; color: var(--accent-blue); letter-spacing: 1px; }
 
         /* Skill Tags - Interactive */
-        .skill-box {
-            background: #fafafa;
-            border: 1px solid var(--card-border);
-            border-radius: 20px;
-            padding: 30px;
-            height: 100%;
-        }
-        .skill-tag {
-            background: var(--bg-white);
-            border: 1px solid var(--card-border);
-            padding: 6px 14px;
-            border-radius: 8px;
-            font-size: 0.8rem;
-            font-weight: 600;
-            color: var(--text-main);
-            margin: 0 4px 8px 0;
-            display: inline-block;
-            cursor: pointer;
-            transition: 0.2s;
-            text-decoration: none;
-        }
-        .skill-tag:hover {
-            background: var(--accent-blue);
-            color: white;
-            border-color: var(--accent-blue);
-            transform: scale(1.05);
-        }
+        .skill-box { background: #fafafa; border: 1px solid var(--card-border); border-radius: 20px; padding: 30px; height: 100%; transition: 0.3s; }
+        .skill-box:hover { border-color: var(--accent-blue); background: #fff; }
+        .skill-tag { background: var(--bg-white); border: 1px solid var(--card-border); padding: 8px 16px; border-radius: 8px; font-size: 0.8rem; font-weight: 600; color: var(--text-main); margin: 0 4px 10px 0; display: inline-block; cursor: pointer; transition: 0.2s; text-decoration: none; }
+        .skill-tag:hover { background: var(--accent-blue); color: white; border-color: var(--accent-blue); transform: scale(1.05); }
 
-        /* Buttons */
-        .btn-dark-custom {
-            background: var(--text-main);
-            color: white;
-            padding: 14px 32px;
-            border-radius: 12px;
-            font-weight: 700;
-            border: none;
-            transition: 0.3s;
-        }
-        .btn-dark-custom:hover { background: var(--accent-blue); transform: translateY(-2px); }
+        /* Modal Styles */
+        .modal-content { border-radius: 24px; border: none; padding: 25px; }
+        .modal-title { font-weight: 800; letter-spacing: -1px; color: var(--accent-blue); }
+        .proof-box { background: var(--tag-bg); padding: 15px; border-radius: 12px; margin-top: 15px; border-left: 4px solid var(--accent-blue); }
 
-        /* Modal Custom Styling */
-        .modal-content { border-radius: 24px; border: none; padding: 20px; }
-        .modal-header { border-bottom: none; }
-        .modal-title { font-weight: 800; letter-spacing: -1px; }
-
-        @media (max-width: 991px) {
-            .hero-name { font-size: 3.5rem; }
-            .profile-img-container { margin: 40px auto 0; }
-        }
+        @media (max-width: 991px) { .hero-name { font-size: 3.5rem; } .profile-img-container { margin: 40px auto 0; } }
     </style>
 </head>
 <body>
@@ -152,7 +68,7 @@
             <a class="navbar-brand fw-bold" href="#">sufiana-hub<span>.</span></a>
             <div class="ms-auto d-none d-lg-flex">
                 <a class="nav-link" href="#projects">Projects</a>
-                <a class="nav-link" href="#skills">Skills</a>
+                <a class="nav-link" href="#skills">Skills Proof</a>
                 <a class="nav-link" href="#education">Education</a>
                 <a class="nav-link" href="#contact">Contact</a>
             </div>
@@ -164,22 +80,20 @@
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-7" data-aos="fade-up">
-                    <span class="hero-label">— PORTFOLIO</span>
+                    <span class="hero-label">— DATABASE MANAGEMENT SPECIALIST</span>
                     <h1 class="hero-name">Sufiana Adlin <br><span>Baharom</span></h1>
                     <div class="location-badge mb-4"><i class="bi bi-geo-alt"></i> Shah Alam, Selangor</div>
                     <p class="fs-5 text-muted mb-5 pe-lg-5">
-                        Database Management specialist and <strong>Head of Department’s Award</strong> recipient. 
-                        Engineering scalable data architectures and transforming complex 
-                        information into seamless digital solutions.
+                        Computer Science Scholar and <strong>Head of Department’s Award</strong> recipient. 
+                        Expertise in architecting high-integrity relational databases and AI-integrated web systems.
                     </p>
                     <div class="d-flex gap-3">
-                        <a href="mailto:sufianabaharom@gmail.com" class="btn-dark-custom">Hire Me</a>
-                        <a href="https://linkedin.com" target="_blank" class="btn btn-outline-secondary rounded-4 px-4 fw-bold">LinkedIn ↗</a>
+                        <a href="mailto:sufianabaharom@gmail.com" class="btn btn-dark rounded-4 px-4 py-3 fw-bold">Contact Me</a>
+                        <a href="https://linkedin.com" target="_blank" class="btn btn-outline-primary rounded-4 px-4 py-3 fw-bold">LinkedIn ↗</a>
                     </div>
                 </div>
                 <div class="col-lg-5" data-aos="zoom-in">
                     <div class="profile-img-container shadow-lg">
-                        <!-- Replace with your actual image file -->
                         <img src="PORTFOLIO_PROFILE.jpg" alt="Sufiana Adlin" class="img-fluid" onerror="this.src='https://via.placeholder.com/400x400?text=Profile+Image'">
                     </div>
                 </div>
@@ -191,41 +105,41 @@
     <section id="projects" class="py-5">
         <div class="container">
             <div class="mb-5">
-                <h2 class="fw-extrabold display-5 fw-bold">Projects</h2>
-                <div style="width: 60px; height: 4px; background: var(--accent-blue); margin-top: 10px;"></div>
+                <h2 class="display-5 fw-bold">Featured Projects</h2>
+                <div style="width: 80px; height: 5px; background: var(--accent-blue); margin-top: 10px;"></div>
             </div>
 
             <div class="row g-4">
-                <!-- Project 1 -->
+                <!-- FYP -->
                 <div class="col-md-4" data-aos="fade-up">
-                    <div class="project-card">
-                        <span class="badge bg-primary mb-3">SYSTEM DEVELOPMENT</span>
-                        <h4 class="fw-bold">PIMS Islamic Center System</h4>
-                        <p class="text-muted small">A full-stack management system built for Politeknik Balik Pulau to digitize activities and Infaq management.</p>
+                    <div class="project-card" style="border-top-color: #ef4444;">
+                        <span class="workshop-tag">Final Year Project</span>
+                        <h4 class="fw-bold mt-2">Lestari Bot: Dormitory System</h4>
+                        <p class="text-muted small">An AI-integrated management system using NLP for troubleshooting and maintenance ticketing with a 3NF normalized MySQL database.</p>
                         <div class="mt-4">
-                            <span class="skill-tag">PHP</span><span class="skill-tag">MySQL</span><span class="skill-tag">Bootstrap</span>
+                            <span class="skill-tag">AI/NLP</span><span class="skill-tag">MySQL (3NF)</span><span class="skill-tag">PHP</span>
                         </div>
                     </div>
                 </div>
-                <!-- Project 2 -->
+                <!-- Workshop 2 -->
                 <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
-                    <div class="project-card">
-                        <span class="badge bg-warning text-dark mb-3">DATABASE DESIGN</span>
-                        <h4 class="fw-bold">Oracle Database Optimization</h4>
-                        <p class="text-muted small">Designed complex relational schemas and PL/SQL procedures for enterprise data integrity.</p>
+                    <div class="project-card" style="border-top-color: #3b82f6;">
+                        <span class="workshop-tag">Workshop 2 (Group)</span>
+                        <h4 class="fw-bold mt-2">House Rental Management</h4>
+                        <p class="text-muted small">Collaborative development of a web-based property portal automating booking, agreements, and landlord-tenant interactions.</p>
                         <div class="mt-4">
-                            <span class="skill-tag">Oracle</span><span class="skill-tag">PL/SQL</span><span class="skill-tag">ERD</span>
+                            <span class="skill-tag">Collaboration</span><span class="skill-tag">PHP</span><span class="skill-tag">JavaScript</span>
                         </div>
                     </div>
                 </div>
-                <!-- Project 3 -->
+                <!-- Workshop 1 -->
                 <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
-                    <div class="project-card">
-                        <span class="badge bg-success mb-3">SEO & IT OPERATIONS</span>
-                        <h4 class="fw-bold">Wallmaster Digital Audit</h4>
-                        <p class="text-muted small">Conducted technical SEO audits, fixing 404 errors and optimizing WordPress back-ends.</p>
+                    <div class="project-card" style="border-top-color: #10b981;">
+                        <span class="workshop-tag">Workshop 1</span>
+                        <h4 class="fw-bold mt-2">Lestari Maintenance (LMS)</h4>
+                        <p class="text-muted small">Initial standalone maintenance logging system designed to transition manual dormitory reports into a structured digital format.</p>
                         <div class="mt-4">
-                            <span class="skill-tag">WordPress</span><span class="skill-tag">SEO Audit</span><span class="skill-tag">Analytics</span>
+                            <span class="skill-tag">C++ Logic</span><span class="skill-tag">Data Modeling</span><span class="skill-tag">SDLC</span>
                         </div>
                     </div>
                 </div>
@@ -233,83 +147,64 @@
         </div>
     </section>
 
-    <!-- ======= Skills Section - REDIRECT TO MODALS ======= -->
-    <section id="skills" class="py-5">
+    <!-- ======= Skills Section - TRIGGERING MODALS ======= -->
+    <section id="skills" class="py-5 bg-light">
         <div class="container">
             <div class="mb-5 text-center">
-                <h2 class="fw-bold">Technical Skills</h2>
-                <p class="text-muted">Click any skill to see the associated project proof.</p>
+                <h2 class="fw-bold">Technical Skills Proof</h2>
+                <p class="text-muted">Click a skill to see which project or course validates my expertise.</p>
             </div>
             <div class="row g-4">
                 <!-- Languages -->
                 <div class="col-md-3" data-aos="fade-up">
-                    <div class="skill-box">
+                    <div class="skill-box shadow-sm">
                         <div class="text-primary fw-bold small mb-3">LANGUAGES</div>
-                        <a href="#" class="skill-tag" data-bs-toggle="modal" data-bs-target="#modalSQL">SQL</a>
+                        <a href="#" class="skill-tag" data-bs-toggle="modal" data-bs-target="#modalSQL">SQL (Oracle/MySQL)</a>
                         <a href="#" class="skill-tag" data-bs-toggle="modal" data-bs-target="#modalPHP">PHP</a>
                         <a href="#" class="skill-tag" data-bs-toggle="modal" data-bs-target="#modalJS">JavaScript</a>
-                        <a href="#" class="skill-tag" data-bs-toggle="modal" data-bs-target="#modalR">R</a>
                     </div>
                 </div>
                 <!-- Database -->
                 <div class="col-md-3" data-aos="fade-up" data-aos-delay="100">
-                    <div class="skill-box">
+                    <div class="skill-box shadow-sm">
                         <div class="text-primary fw-bold small mb-3">DATABASE</div>
-                        <a href="#" class="skill-tag" data-bs-toggle="modal" data-bs-target="#modalOracle">Oracle</a>
-                        <a href="#" class="skill-tag" data-bs-toggle="modal" data-bs-target="#modalMySQL">MySQL</a>
+                        <a href="#" class="skill-tag" data-bs-toggle="modal" data-bs-target="#modalOracle">Oracle PL/SQL</a>
+                        <a href="#" class="skill-tag" data-bs-toggle="modal" data-bs-target="#modal3NF">Normalization (3NF)</a>
                         <a href="#" class="skill-tag" data-bs-toggle="modal" data-bs-target="#modalAzure">Azure SQL</a>
                     </div>
                 </div>
                 <!-- Analysis -->
                 <div class="col-md-3" data-aos="fade-up" data-aos-delay="200">
-                    <div class="skill-box">
+                    <div class="skill-box shadow-sm">
                         <div class="text-primary fw-bold small mb-3">ANALYSIS</div>
                         <a href="#" class="skill-tag" data-bs-toggle="modal" data-bs-target="#modalSDLC">SDLC</a>
-                        <a href="#" class="skill-tag" data-bs-toggle="modal" data-bs-target="#modalSEO">SEO Audit</a>
-                        <a href="#" class="skill-tag" data-bs-toggle="modal" data-bs-target="#modalData">Data Mining</a>
+                        <a href="#" class="skill-tag" data-bs-toggle="modal" data-bs-target="#modalSEO">SEO Technical Audit</a>
                     </div>
                 </div>
                 <!-- Specialized -->
                 <div class="col-md-3" data-aos="fade-up" data-aos-delay="300">
-                    <div class="skill-box">
+                    <div class="skill-box shadow-sm">
                         <div class="text-primary fw-bold small mb-3">SPECIALIZED</div>
+                        <a href="#" class="skill-tag" data-bs-toggle="modal" data-bs-target="#modalAI">AI & NLP</a>
                         <a href="#" class="skill-tag" data-bs-toggle="modal" data-bs-target="#modalGIS">ESRI GIS</a>
-                        <a href="#" class="skill-tag" data-bs-toggle="modal" data-bs-target="#modalCyber">Cybersecurity</a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ======= Education ======= -->
-    <section id="education" class="py-5 bg-light">
-        <div class="container">
-            <h2 class="fw-bold mb-5">Education</h2>
-            <div class="edu-card border-start border-primary border-4 ps-4 mb-5" data-aos="fade-left">
-                <h4 class="fw-bold">Bachelor of Computer Science (Hons.) Database Management</h4>
-                <p class="text-primary fw-bold mb-1">UTeM | CGPA 3.28</p>
-                <p class="text-muted small">2022 — 2026 | Head of Department's Award Recipient</p>
-            </div>
-            <div class="edu-card border-start border-secondary border-4 ps-4" data-aos="fade-left" data-aos-delay="100">
-                <h4 class="fw-bold">Diploma in Information Technology (Digital Technology)</h4>
-                <p class="text-muted fw-bold mb-1">Politeknik Balik Pulau | CGPA 3.68</p>
-                <p class="text-muted small">2019 — 2022 | Best Student Merit Status</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- ======= Modals (The "Redirect" content) ======= -->
+    <!-- ======= Modals for Proof ======= -->
+    
     <!-- Modal SQL -->
     <div class="modal fade" id="modalSQL" tabindex="-1">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title">SQL Expertise</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-                </div>
+                <div class="modal-header"><h5 class="modal-title">SQL Expertise</h5><button type="button" class="btn-close" data-bs-dismiss="modal"></button></div>
                 <div class="modal-body">
-                    <p>Proven through **BITP2303 Database Programming** and applied in the **PIMS System** back-end for data retrieval and donation tracking.</p>
-                    <a href="#projects" class="btn btn-primary btn-sm rounded-3" onclick="bootstrap.Modal.getInstance(document.getElementById('modalSQL')).hide();">View PIMS Project</a>
+                    <p>Proficiency in data retrieval, manipulation, and transaction management.</p>
+                    <div class="proof-box">
+                        <strong>Project Proof:</strong> Applied in <strong>Lestari Bot (FYP)</strong> and <strong>House Rental System</strong> for secure database communications and CRUD operations.
+                    </div>
                 </div>
             </div>
         </div>
@@ -319,53 +214,64 @@
     <div class="modal fade" id="modalPHP" tabindex="-1">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title">PHP Development</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-                </div>
+                <div class="modal-header"><h5 class="modal-title">PHP Development</h5><button type="button" class="btn-close" data-bs-dismiss="modal"></button></div>
                 <div class="modal-body">
-                    <p>Primary language used for the **PIMS (Sistem Pengurusan Pusat Islam)** web application, handling all server-side logic and database connectivity.</p>
+                    <p>Primary language for server-side logic and database connectivity.</p>
+                    <div class="proof-box">
+                        <strong>Project Proof:</strong> Engineered the entire backend for the <strong>House Rental Management System</strong> and <strong>Lestari Bot (FYP)</strong>.
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- Modal SEO -->
-    <div class="modal fade" id="modalSEO" tabindex="-1">
+    <!-- Modal 3NF -->
+    <div class="modal fade" id="modal3NF" tabindex="-1">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title">Technical SEO Audit</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-                </div>
+                <div class="modal-header"><h5 class="modal-title">Database Normalization</h5><button type="button" class="btn-close" data-bs-dismiss="modal"></button></div>
                 <div class="modal-body">
-                    <p>Honed during my internship at **Wallmaster Digital Sdn. Bhd.**, where I resolved 79+ missing meta descriptions and fixed broken site URLs.</p>
+                    <p>Expertise in reducing data redundancy and ensuring referential integrity.</p>
+                    <div class="proof-box">
+                        <strong>Project Proof:</strong> Designed a complex <strong>3rd Normal Form (3NF)</strong> schema for <strong>Lestari Bot</strong>, ensuring zero insertion/deletion anomalies.
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- Add more modals here for R, Oracle, Azure, etc. using the same structure -->
+    <!-- Modal AI -->
+    <div class="modal fade" id="modalAI" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header"><h5 class="modal-title">AI & Chatbot Integration</h5><button type="button" class="btn-close" data-bs-dismiss="modal"></button></div>
+                <div class="modal-body">
+                    <p>Integrating intelligence into standard management systems.</p>
+                    <div class="proof-box">
+                        <strong>Project Proof:</strong> Developed <strong>Lestari Bot</strong> using keyword-based NLP to automate hostel maintenance troubleshooting.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
-    <!-- ======= Contact ======= -->
+    <!-- ======= Contact Footer ======= -->
     <footer id="contact" class="py-5 bg-white border-top">
         <div class="container text-center">
             <h2 class="fw-bold mb-4">Initialize Connection</h2>
-            <p class="text-muted">Currently seeking Internship Placements: September — March</p>
+            <p class="text-muted">Seeking Internship: September 2026 — March 2027</p>
             <div class="d-flex justify-content-center gap-4 my-4">
                 <a href="mailto:sufianabaharom@gmail.com" class="text-dark fs-3"><i class="bi bi-envelope-at-fill"></i></a>
                 <a href="#" class="text-dark fs-3"><i class="bi bi-linkedin"></i></a>
                 <a href="#" class="text-dark fs-3"><i class="bi bi-github"></i></a>
             </div>
-            <p class="small text-muted">&copy; 2026 Sufiana Adlin. Data Professional.</p>
+            <p class="small text-muted">&copy; 2026 Sufiana Adlin | Engineering Better Systems.</p>
         </div>
     </footer>
 
     <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-        AOS.init({ duration: 1000, once: true });
-    </script>
+    <script>AOS.init({ duration: 1000, once: true });</script>
 </body>
 </html>
