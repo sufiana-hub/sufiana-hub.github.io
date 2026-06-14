@@ -142,6 +142,20 @@
             .hero-name { font-size: 3.5rem; }
             .profile-img-container { margin: 40px auto 0; }
         }
+
+        .nav-pills .nav-link {
+    color: #666;
+    background: transparent;
+    border-radius: 0;
+    padding: 0 20px 10px 0;
+    margin-right: 20px;
+    border-bottom: 3px solid transparent;
+}
+.nav-pills .nav-link.active {
+    color: #121212;
+    background: transparent;
+    border-bottom: 3px solid var(--accent-blue);
+}
     </style>
 </head>
 <body>
@@ -189,15 +203,53 @@
         </div>
     </section>
 
-   <!-- ======= Projects Section ======= -->
+<!-- ======= Projects Section ======= -->
 <section id="projects" class="py-5">
     <div class="container">
-        <div class="mb-5">
-            <h2 class="fw-extrabold display-5 fw-bold">Projects</h2>
-            <h2 class="fw-extrabold display-5 fw-bold">Diploma</h2>
-            <h2 class="fw-extrabold display-5 fw-bold">Degree</h2>
-            <div style="width: 60px; height: 4px; background: var(--accent-blue); margin-top: 10px;"></div>
+        
+        <!-- Tab Navigation -->
+        <ul class="nav nav-pills mb-4" id="pills-tab" role="tablist">
+            <li class="nav-item" role="presentation">
+                <button class="nav-link active fw-bold" id="pills-projects-tab" data-bs-toggle="pill" data-bs-target="#pills-projects" type="button" role="tab">Projects</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link fw-bold" id="pills-diploma-tab" data-bs-toggle="pill" data-bs-target="#pills-diploma" type="button" role="tab">Diploma</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link fw-bold" id="pills-degree-tab" data-bs-toggle="pill" data-bs-target="#pills-degree" type="button" role="tab">Degree</button>
+            </li>
+        </ul>
+
+        <!-- Tab Content -->
+        <div class="tab-content" id="pills-tabContent">
+            
+            <!-- Projects Content -->
+            <div class="tab-pane fade show active" id="pills-projects" role="tabpanel">
+                <div class="row g-4">
+                    <!-- Paste your Project cards here -->
+                    <div class="col-lg-4 col-md-6">Projects</div>
+                </div>
+            </div>
+
+            <!-- Diploma Content -->
+            <div class="tab-pane fade" id="pills-diploma" role="tabpanel">
+                <div class="row g-4">
+                    <!-- Add Diploma specific projects or certificates here -->
+                    <div class="col-md-12"><p>Diploma</p></div>
+                </div>
+            </div>
+
+            <!-- Degree Content -->
+            <div class="tab-pane fade" id="pills-degree" role="tabpanel">
+                <div class="row g-4">
+                    <!-- Add Degree specific projects here -->
+                    <div class="col-md-12"><p>Degree</p></div>
+                </div>
+            </div>
+
         </div>
+    </div>
+</section>
 
         <!-- Start of ONE SINGLE ROW -->
         <div class="row g-4">
