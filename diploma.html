@@ -92,7 +92,7 @@
             background: var(--accent-blue); border-radius: 20px 20px 0 0;
         }
 
-        /* Skill Tags - Interactive */
+        /* Skill Tags */
         .skill-box {
             background: #fafafa;
             border: 1px solid var(--card-border);
@@ -130,8 +130,24 @@
             font-weight: 700;
             border: none;
             transition: 0.3s;
+            text-decoration: none;
         }
-        .btn-dark-custom:hover { background: var(--accent-blue); transform: translateY(-2px); }
+        .btn-dark-custom:hover { background: var(--accent-blue); transform: translateY(-2px); color: white;}
+
+        /* Custom Tabs Styling */
+        .nav-pills .nav-link {
+            color: #666;
+            background: transparent;
+            border-radius: 0;
+            padding: 0 20px 10px 0;
+            margin-right: 20px;
+            border-bottom: 3px solid transparent;
+        }
+        .nav-pills .nav-link.active {
+            color: #121212;
+            background: transparent;
+            border-bottom: 3px solid var(--accent-blue);
+        }
 
         /* Modal Custom Styling */
         .modal-content { border-radius: 24px; border: none; padding: 20px; }
@@ -142,21 +158,6 @@
             .hero-name { font-size: 3.5rem; }
             .profile-img-container { margin: 40px auto 0; }
         }
-
-        .nav-pills .nav-link {
-    color: #666;
-    background: transparent;
-    border-radius: 0;
-    padding: 0 20px 10px 0;
-    margin-right: 20px;
-    border-bottom: 3px solid transparent;
-}
-.nav-pills .nav-link.active {
-    color: #121212;
-    background: transparent;
-    border-bottom: 3px solid var(--accent-blue);
-}
-
     </style>
 </head>
 <body>
@@ -165,13 +166,16 @@
     <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container">
             <a class="navbar-brand fw-bold" href="#">sufiana-hub<span>.</span></a>
-            <div class="ms-auto d-none d-lg-flex">
-                <a class="nav-link" href="#projects">Projects</a>
-                <a class="nav-link" href="#skills">Skills</a>
-                <a class="nav-link" href="#education">Education</a>
-                <a class="nav-link" href="#contact">Contact</a>
-                <a class="nav-link" href="diploma.html">Diploma</a>
-                <a class="nav-link" href="degree.html">Degree</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <div class="ms-auto d-flex flex-column flex-lg-row">
+                    <a class="nav-link" href="#projects">Projects</a>
+                    <a class="nav-link" href="#skills">Certificates</a>
+                    <a class="nav-link" href="#education">Education</a>
+                    <a class="nav-link" href="#contact">Contact</a>
+                </div>
             </div>
         </div>
     </nav>
@@ -187,16 +191,14 @@
                     <p class="fs-5 text-muted mb-5 pe-lg-5"> I am a <strong>structured thinker and a final-year database management </strong>student at UTeM, 
                         currently <strong>seeking a professional internship </strong>from September to March. I bridge the <strong>gap between complex data systems and business solutions. </strong>
                     </p>
-                    <class="d-flex gap-3>
+                    <div class="d-flex flex-wrap gap-3">
                         <a href="mailto:sufianabaharom@gmail.com" class="btn-dark-custom">Hire Me</a>
-                        <a href="https://www.linkedin.com/in/sufianabaharom/" target="_blank" class="btn btn-outline-secondary rounded-4 px-4 fw-bold">LinkedIn ↗</a>
-                        <!-- Added the 'download' attribute -->
-                        <a href="SUFIANA_CV.pdf" download="Sufiana_Adlin_Resume" class="btn btn-outline-secondary rounded-4 px-4 fw-bold"> Download Resume <i class="bi bi-download"></i></a>
-                    </class=>
+                        <a href="https://www.linkedin.com/in/sufianabaharom/" target="_blank" class="btn btn-outline-secondary rounded-4 px-4 py-2 fw-bold d-flex align-items-center">LinkedIn ↗</a>
+                        <a href="SUFIANA_CV.pdf" download="Sufiana_Adlin_Resume" class="btn btn-outline-secondary rounded-4 px-4 py-2 fw-bold d-flex align-items-center" id="resume-container"> Download Resume <i class="bi bi-download ms-2"></i></a>
+                    </div>
                 </div>
                 <div class="col-lg-5" data-aos="zoom-in">
                     <div class="profile-img-container shadow-lg">
-                        <!-- Replace with your actual image file -->
                         <img src="PORTFOLIO_PROFILE.jpg" alt="Sufiana Adlin" class="img-fluid" onerror="this.src='https://via.placeholder.com/400x400?text=Profile+Image'">
                     </div>
                 </div>
@@ -204,14 +206,15 @@
         </div>
     </section>
 
-<!-- ======= Projects Section ======= -->
-<section id="projects" class="py-4 bg-light">
+    <!-- ======= Projects Section (Tabbed) ======= -->
+    <section id="projects" class="py-4 bg-light">
         <div class="container">
             <div class="mb-4">
                 <h2 class="fw-extrabold display-5 fw-bold">Experience & Projects</h2>
                 <div style="width: 60px; height: 4px; background: var(--accent-blue); margin-top: 10px;"></div>
             </div>
 
+            <!-- Tab Navigation -->
             <ul class="nav nav-pills mb-4" id="pills-tab" role="tablist">
                 <li class="nav-item" role="presentation">
                     <button class="nav-link active fw-bold" id="pills-projects-tab" data-bs-toggle="pill" data-bs-target="#pills-projects" type="button" role="tab">All Projects</button>
@@ -224,11 +227,12 @@
                 </li>
             </ul>
 
+            <!-- Tab Content -->
             <div class="tab-content" id="pills-tabContent">
                 
+                <!-- ALL PROJECTS PANE -->
                 <div class="tab-pane fade show active" id="pills-projects" role="tabpanel">
                     <div class="row g-3">
-                        
                         <div class="col-lg-4 col-md-6" data-aos="fade-up">
                             <div class="project-card h-100">
                                 <span class="badge bg-warning text-dark mb-3">SYSTEM DEVELOPMENT</span>
@@ -257,7 +261,7 @@
                             <div class="project-card h-100">
                                 <span class="badge bg-warning text-dark mb-3">SYSTEM DEVELOPMENT</span>
                                 <h4 class="fw-bold">PIMS Islamic Center System</h4>
-                                <p class="text-muted small">A full-stack management system built for Politeknik Balik Pulau to digitize activities and Infaq management processes.</p>
+                                <p class="text-muted small">A full-stack management system built for Politeknik Balik Pulau to digitize activities and Infaq management processes[cite: 3].</p>
                                 <div class="mt-4">
                                     <a href="https://sufiana-pims-eqehcdfvargnbqh8.southeastasia-01.azurewebsites.net/index.php" target="_blank" class="btn btn-outline-secondary btn-sm rounded-4 px-3 fw-bold mb-2">PIMS Website ↗</a>
                                     <div class="mt-2"><span class="skill-tag">PHP</span><span class="skill-tag">MySQL</span><span class="skill-tag">Bootstrap</span></div>
@@ -281,10 +285,80 @@
                             <div class="project-card h-100" style="border-top-color: #10b981;">
                                 <span class="badge bg-success mb-3 text-white">SEO & IT OPERATIONS</span>
                                 <h4 class="fw-bold">Wallmaster Digital Audit</h4>
-                                <p class="text-muted small">Conducted technical SEO audits, fixing 404 errors and optimizing WordPress back-ends to improve site ranking and performance.</p>
+                                <p class="text-muted small">Conducted technical SEO audits, fixing 404 errors and optimizing WordPress back-ends to improve site ranking and performance[cite: 2].</p>
                                 <div class="mt-4">
                                     <a href="https://www.wallmaster.com.my/" target="_blank" class="btn btn-outline-secondary btn-sm rounded-4 px-3 fw-bold mb-2">Wallmaster Website ↗</a>
                                     <div class="mt-2"><span class="skill-tag">WordPress</span><span class="skill-tag">SEO Audit</span><span class="skill-tag">Analytics</span></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- DIPLOMA PANE (NEWLY STRUCTURED) -->
+                <div class="tab-pane fade" id="pills-diploma" role="tabpanel">
+                    <div class="row g-4">
+                        
+                        <!-- Subjects & Grades -->
+                        <div class="col-12">
+                            <h4 class="fw-bold mb-3">Academic Coursework (CGPA: 3.68)</h4>
+                            <div class="card border-0 shadow-sm rounded-4 p-4" style="background: #fff; border: 1px solid var(--card-border) !important;">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <ul class="list-unstyled mb-0">
+                                            <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i>System Analysis and Design (A)</li>
+                                            <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i>Database Design & Querying (A)</li>
+                                            <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i>Web Programming - PHP & MySQL (A)</li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <ul class="list-unstyled mb-0">
+                                            <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i>Computer Networks & Security (A-)</li>
+                                            <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i>Digital Marketing & SEO Analytics (A)</li>
+                                            <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i>Integrated Final Year Project (A)</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <p class="text-muted small mt-3 mb-0"><em>*Note: Awarded the Head of Department's Award for outstanding academic achievement.</em></p>
+                            </div>
+                        </div>
+
+                        <div class="col-12 mt-4">
+                            <h4 class="fw-bold mb-0">Diploma Projects & Internship</h4>
+                        </div>
+
+                        <!-- PIMS Project -->
+                        <div class="col-lg-6 col-md-6" data-aos="fade-up">
+                            <!-- We use p-0 on the card so the image stretches edge-to-edge -->
+                            <div class="project-card h-100 p-0 overflow-hidden">
+                                <!-- CHANGE THE SRC TO YOUR ACTUAL PIMS IMAGE -->
+                                <img src="pims_image.jpg" alt="PIMS System Interface" class="img-fluid w-100" style="height: 220px; object-fit: cover;" onerror="this.src='https://via.placeholder.com/800x400?text=PIMS+Islamic+Center+System'">
+                                <div class="p-4">
+                                    <span class="badge bg-warning text-dark mb-3">FINAL YEAR PROJECT</span>
+                                    <h4 class="fw-bold">PIMS Islamic Center System</h4>
+                                    <p class="text-muted small">A full-stack management system built for Politeknik Balik Pulau[cite: 3]. Designed to automate the tracking of student attendance, make it easier to communicate with students, and offer prompt reminders to foster engagement[cite: 4].</p>
+                                    <div class="mt-4">
+                                        <a href="https://sufiana-pims-eqehcdfvargnbqh8.southeastasia-01.azurewebsites.net/index.php" target="_blank" class="btn btn-outline-secondary btn-sm rounded-4 px-3 fw-bold mb-2">PIMS Website ↗</a>
+                                        <div class="mt-2"><span class="skill-tag">PHP</span><span class="skill-tag">MySQL</span><span class="skill-tag">Bootstrap</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Wallmaster Internship -->
+                        <div class="col-lg-6 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                            <!-- We use p-0 on the card so the image stretches edge-to-edge -->
+                            <div class="project-card h-100 p-0 overflow-hidden" style="border-top-color: #10b981;">
+                                <!-- CHANGE THE SRC TO YOUR ACTUAL WALLMASTER IMAGE -->
+                                <img src="wallmaster_image.jpg" alt="Wallmaster Audit" class="img-fluid w-100" style="height: 220px; object-fit: cover;" onerror="this.src='https://via.placeholder.com/800x400?text=Wallmaster+Digital+Audit'">
+                                <div class="p-4">
+                                    <span class="badge bg-success mb-3 text-white">SEO & IT OPERATIONS (INTERNSHIP)</span>
+                                    <h4 class="fw-bold">Wallmaster Digital Audit</h4>
+                                    <p class="text-muted small">Conducted technical SEO audits and optimized WordPress back-ends[cite: 2]. Resolved 404 errors, tracked broken URLs via Google Analytics, and managed digital social media platforms[cite: 2].</p>
+                                    <div class="mt-4">
+                                        <a href="https://www.wallmaster.com.my/" target="_blank" class="btn btn-outline-secondary btn-sm rounded-4 px-3 fw-bold mb-2">Wallmaster Website ↗</a>
+                                        <div class="mt-2"><span class="skill-tag">WordPress</span><span class="skill-tag">SEO Audit</span><span class="skill-tag">Analytics</span></div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -292,30 +366,7 @@
                     </div>
                 </div>
 
-                <div class="tab-pane fade" id="pills-diploma" role="tabpanel">
-                    <div class="row g-3">
-                        <div class="col-12"><p class="mb-2 text-muted fw-bold">Projects completed during Diploma in Information Technology:</p></div>
-                        
-                        <div class="col-lg-4 col-md-6">
-                            <div class="project-card h-100">
-                                <span class="badge bg-warning text-dark mb-3">SYSTEM DEVELOPMENT</span>
-                                <h4 class="fw-bold">PIMS Islamic Center System</h4>
-                                <p class="text-muted small">A full-stack management system built for Politeknik Balik Pulau.</p>
-                                <div class="mt-4"><a href="#" class="btn btn-outline-secondary btn-sm rounded-4 px-3 fw-bold mb-2">PIMS Website ↗</a></div>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-4 col-md-6">
-                            <div class="project-card h-100" style="border-top-color: #10b981;">
-                                <span class="badge bg-success mb-3 text-white">SEO & IT OPERATIONS</span>
-                                <h4 class="fw-bold">Wallmaster Digital Audit</h4>
-                                <p class="text-muted small">Conducted technical SEO audits and optimized WordPress back-ends.</p>
-                                <div class="mt-4"><a href="#" class="btn btn-outline-secondary btn-sm rounded-4 px-3 fw-bold mb-2">Wallmaster Website ↗</a></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
+                <!-- DEGREE PANE -->
                 <div class="tab-pane fade" id="pills-degree" role="tabpanel">
                     <div class="row g-3">
                         <div class="col-12"><p class="mb-2 text-muted fw-bold">Projects completed during Bachelor of Computer Science (Database Management):</p></div>
@@ -353,115 +404,55 @@
         </div>
     </section>
 
-
-    <!-- ======= Skills Section - REDIRECT TO MODALS ======= -->
-    <section id="skills" class="py-5">
+    <!-- ======= Certificate Section ======= -->
+    <section id="skills" class="py-4">
         <div class="container">
-            <div class="mb-5 text-center">
-                <h2 class="fw-bold">Technical Skills</h2>
-                <p class="text-muted">Click any skill to see the associated project proof.</p>
+            <div class="mb-4 text-center">
+                <h2 class="fw-bold">Certificates & Skills</h2>
+                <p class="text-muted">Click any certificate to see the associated certificate proof.</p>
             </div>
-            <div class="row g-4">
-                <!-- Languages -->
+            
+            <div class="row g-3">
                 <div class="col-md-3" data-aos="fade-up">
-                    <div class="skill-box">
-                        <div class="text-primary fw-bold small mb-3">LANGUAGES</div>
-                        <a href="#" class="skill-tag" data-bs-toggle="modal" data-bs-target="#modalSQL">SQL</a>
-                        <a href="#" class="skill-tag" data-bs-toggle="modal" data-bs-target="#modalPHP">PHP</a>
-                        <a href="#" class="skill-tag" data-bs-toggle="modal" data-bs-target="#modalJS">JavaScript</a>
-                        <a href="#" class="skill-tag" data-bs-toggle="modal" data-bs-target="#modalR">R</a>
-                        <a href="#" class="skill-tag" data-bs-toggle="modal" data-bs-target="#modalPhyton">Phyton</a>
+                    <div class="skill-box h-100">
+                        <div class="text-primary fw-bold small mb-3">Credly</div>
+                        <a href="https://www.credly.com/users/sufiana-binti-baharom" class="skill-tag d-block mb-2" data-bs-toggle="modal" data-bs-target="#modalSQL">Credly Account</a>
+                        <a href="https://www.credly.com/badges/ce932841-955e-481e-b803-f94d4b21013c/public_url" class="skill-tag d-block mb-2" data-bs-toggle="modal" data-bs-target="#modalPHP">Basic Principles of Design</a>
+                        <a href="https://www.credly.com/badges/bfd8949f-46d3-49ca-85f7-173447d90fa9/public_url" class="skill-tag d-block mb-2" data-bs-toggle="modal" data-bs-target="#modalJS">Build Your Own Chatbot - Level 1</a>
                     </div>
                 </div>
-                <!-- Database -->
+
                 <div class="col-md-3" data-aos="fade-up" data-aos-delay="100">
-                    <div class="skill-box">
-                        <div class="text-primary fw-bold small mb-3">DATABASE</div>
-                        <a href="#" class="skill-tag" data-bs-toggle="modal" data-bs-target="#modalOracle">Oracle</a>
-                        <a href="#" class="skill-tag" data-bs-toggle="modal" data-bs-target="#modalMySQL">MySQL</a>
-                        <a href="#" class="skill-tag" data-bs-toggle="modal" data-bs-target="#modalAzure">Azure SQL</a>
+                    <div class="skill-box h-100">
+                        <div class="text-primary fw-bold small mb-3">Credly</div>
+                        <a href="https://www.credly.com/badges/0c53c4f2-252e-4560-81c4-aff21d0e8e9b/public_url" class="skill-tag d-block mb-2" data-bs-toggle="modal" data-bs-target="#modalPhyton">Enterprise Design Thinking</a>
+                        <a href="https://www.credly.com/badges/aa1e9685-8cca-4b0d-9687-d0e2cbf10d5a/public_url" class="skill-tag d-block mb-2" data-bs-toggle="modal" data-bs-target="#modalPhyton">Explorations into Mindfulness</a>
+                        <a href="https://www.credly.com/badges/35af7d74-9884-42b9-a383-80af109cb2a1/public_url" class="skill-tag d-block mb-2" data-bs-toggle="modal" data-bs-target="#modalPhyton">Explore Emerging Tech</a>
+                        <a href="https://www.credly.com/badges/dac0d86f-b31c-4009-83fd-32fe79cf13fe/public_url" class="skill-tag d-block mb-2" data-bs-toggle="modal" data-bs-target="#modalPhyton">Job Application Essentials</a>
                     </div>
                 </div>
-                <!-- Analysis -->
+
                 <div class="col-md-3" data-aos="fade-up" data-aos-delay="200">
-                    <div class="skill-box">
-                        <div class="text-primary fw-bold small mb-3">ANALYSIS</div>
-                        <a href="#" class="skill-tag" data-bs-toggle="modal" data-bs-target="#modalSDLC">SDLC</a>
-                        <a href="#" class="skill-tag" data-bs-toggle="modal" data-bs-target="#modalSEO">SEO Audit</a>
-                        <a href="#" class="skill-tag" data-bs-toggle="modal" data-bs-target="#modalData">Data Mining</a>
+                    <div class="skill-box h-100">
+                        <div class="text-primary fw-bold small mb-3">Credly</div>
+                        <a href="https://www.credly.com/badges/efde8d44-96bf-4a37-9264-9dfee04261d5/public_url" class="skill-tag d-block mb-2" data-bs-toggle="modal" data-bs-target="#modalR">Cybersecurity Fundamentals</a>
+                        <a href="https://www.credly.com/badges/09112237-e8a3-4151-84fe-86d2ca73cb8f/public_url" class="skill-tag d-block mb-2" data-bs-toggle="modal" data-bs-target="#modalPhyton">Data Science Foundations</a>
+                        <a href="https://www.credly.com/badges/b964c3bb-7789-42f9-aea2-f5cd564d1b6e/public_url" class="skill-tag d-block mb-2" data-bs-toggle="modal" data-bs-target="#modalPhyton">Project Management</a>
                     </div>
                 </div>
-                <!-- Specialized -->
+
                 <div class="col-md-3" data-aos="fade-up" data-aos-delay="300">
-                    <div class="skill-box">
-                        <div class="text-primary fw-bold small mb-3">SPECIALIZED</div>
-                        <a href="#" class="skill-tag" data-bs-toggle="modal" data-bs-target="#modalGIS">ESRI GIS</a>
-                        <a href="#" class="skill-tag" data-bs-toggle="modal" data-bs-target="#modalCyber">Cybersecurity</a>
+                    <div class="skill-box h-100">
+                        <div class="text-primary fw-bold small mb-3">PDF Downloads</div>
+                        <a href="GIS Basics_Certificate_10142025.pdf" download="GIS_Basics" class="btn btn-outline-secondary rounded-4 px-3 py-2 w-100 text-start mb-2 fw-bold" style="font-size: 0.85rem;"> GIS Basics <i class="bi bi-download float-end"></i></a>
+                        <a href="GIS Basics_Certificate_10142025.pdf" download="GIS_Online_Basics" class="btn btn-outline-secondary rounded-4 px-3 py-2 w-100 text-start mb-2 fw-bold" style="font-size: 0.85rem;"> GIS Online Basics <i class="bi bi-download float-end"></i></a>
+                        <a href="certificate statistic in R.pdf" download="Certificate_Statistics_in_R" class="btn btn-outline-secondary rounded-4 px-3 py-2 w-100 text-start mb-2 fw-bold" style="font-size: 0.85rem;"> Statistics in R <i class="bi bi-download float-end"></i></a>
+                        <a href="Getting Started with Data Management_Certificate_11042025.pdf" download="Getting_Started_With_Data_Management" class="btn btn-outline-secondary rounded-4 px-3 py-2 w-100 text-start fw-bold" style="font-size: 0.85rem;"> Data Management <i class="bi bi-download float-end"></i></a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-
-
-<!-- ======= Certificate ======= -->
-<section id="skills" class="py-5">
-    <div class="container">
-        <div class="mb-5 text-center">
-            <h2 class="fw-bold">Certificate</h2>
-            <p class="text-muted">Click any certificate to see the associated certificate proof.</p>
-        </div>
-        
-        <!-- ONE row container holding all 4 columns -->
-        <div class="row g-4">
-            
-            <!-- Column 1: Diplomas -->
-            <div class="col-md-3" data-aos="fade-up">
-                <div class="skill-box h-100">
-                    <div class="text-primary fw-bold small mb-3">Credly</div>
-                    <a href="https://www.credly.com/users/sufiana-binti-baharom" class="skill-tag d-block mb-2" data-bs-toggle="modal" data-bs-target="#modalSQL">Credly Account</a>
-                    <a href="https://www.credly.com/badges/ce932841-955e-481e-b803-f94d4b21013c/public_url" class="skill-tag d-block mb-2" data-bs-toggle="modal" data-bs-target="#modalPHP">Basic Principles of Design</a>
-                    <a href="https://www.credly.com/badges/bfd8949f-46d3-49ca-85f7-173447d90fa9/public_url" class="skill-tag d-block mb-2" data-bs-toggle="modal" data-bs-target="#modalJS">Build Your Own Chatbot - Level 1</a>
-                </div>
-            </div>
-
-            <!-- Column 2: Database -->
-            <div class="col-md-3" data-aos="fade-up" data-aos-delay="100">
-                <div class="skill-box h-100">
-                    <div class="text-primary fw-bold small mb-3">Credly</div>
-                    <a href="https://www.credly.com/badges/0c53c4f2-252e-4560-81c4-aff21d0e8e9b/public_url" class="skill-tag d-block mb-2" data-bs-toggle="modal" data-bs-target="#modalPhyton">Enterprise Design Thinking Practitioner</a>
-                    <a href="https://www.credly.com/badges/aa1e9685-8cca-4b0d-9687-d0e2cbf10d5a/public_url" class="skill-tag d-block mb-2" data-bs-toggle="modal" data-bs-target="#modalPhyton">Explorations into Mindfulness</a>
-                    <a href="https://www.credly.com/badges/35af7d74-9884-42b9-a383-80af109cb2a1/public_url" class="skill-tag d-block mb-2" data-bs-toggle="modal" data-bs-target="#modalPhyton">Explore Emerging Tech</a>
-                    <a href="https://www.credly.com/badges/dac0d86f-b31c-4009-83fd-32fe79cf13fe/public_url" class="skill-tag d-block mb-2" data-bs-toggle="modal" data-bs-target="#modalPhyton">Job Application Essentials</a>
-                </div>
-            </div>
-
-            <!-- Column 3: Specialized -->
-            <div class="col-md-3" data-aos="fade-up" data-aos-delay="200">
-                <div class="skill-box h-100">
-                    <div class="text-primary fw-bold small mb-3">Credly</div>
-                    <a href="https://www.credly.com/badges/efde8d44-96bf-4a37-9264-9dfee04261d5/public_url" class="skill-tag d-block mb-2" data-bs-toggle="modal" data-bs-target="#modalR">Cybersecurity Fundamentals</a>
-                    <a href="https://www.credly.com/badges/09112237-e8a3-4151-84fe-86d2ca73cb8f/public_url" class="skill-tag d-block mb-2" data-bs-toggle="modal" data-bs-target="#modalPhyton">Data Science Foundations - Level 1</a>
-                    <a href="https://www.credly.com/badges/3ee626f0-890f-4ae5-9271-b9068c3f83fe/public_url" class="skill-tag d-block mb-2" data-bs-toggle="modal" data-bs-target="#modalPhyton">Open Source Origin Stories: Adventures in Hybrid Cloud, AI Ethics...</a>
-                    <a href="https://www.credly.com/badges/b964c3bb-7789-42f9-aea2-f5cd564d1b6e/public_url" class="skill-tag d-block mb-2" data-bs-toggle="modal" data-bs-target="#modalPhyton">Project Management Fundamentals</a>
-                </div>
-            </div>
-
-            <!-- Column 4: PDF -->
-            <div class="col-md-3" data-aos="fade-up" data-aos-delay="300">
-                <div class="skill-box h-100">
-                    <div class="text-primary fw-bold small mb-3">PDF</div>
-                    <!-- Added w-100 (100% width), text-start (left align), and mb-2 (margin-bottom) -->
-                    <a href="GIS Basics_Certificate_10142025.pdf" download="GIS_Basics" class="btn btn-outline-secondary rounded-4 px-3 py-2 w-100 text-start mb-2 fw-bold" style="font-size: 0.85rem;"> GIS Basics <i class="bi bi-download float-end"></i></a>
-                    <a href="GIS Basics_Certificate_10142025.pdf" download="GIS_Online_Basics" class="btn btn-outline-secondary rounded-4 px-3 py-2 w-100 text-start mb-2 fw-bold" style="font-size: 0.85rem;"> GIS Online Basics <i class="bi bi-download float-end"></i></a>
-                    <a href="certificate statistic in R.pdf" download="Certificate_Statistics_in_R" class="btn btn-outline-secondary rounded-4 px-3 py-2 w-100 text-start mb-2 fw-bold" style="font-size: 0.85rem;"> Certificate Statistics in R <i class="bi bi-download float-end"></i></a>
-                    <a href="Getting Started with Data Management_Certificate_11042025.pdf" download="Getting_Started_With_Data_Management" class="btn btn-outline-secondary rounded-4 px-3 py-2 w-100 text-start fw-bold" style="font-size: 0.85rem;"> Data Management <i class="bi bi-download float-end"></i></a>
-                </div>
-            </div>
-            
-        </div>
-    </div>
-</section>
 
     <!-- ======= Education ======= -->
     <section id="education" class="py-5 bg-light">
@@ -480,8 +471,7 @@
         </div>
     </section>
 
-    <!-- ======= Modals (The "Redirect" content) ======= -->
-    <!-- Modal SQL -->
+    <!-- ======= Modals ======= -->
     <div class="modal fade" id="modalSQL" tabindex="-1">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
@@ -491,13 +481,11 @@
                 </div>
                 <div class="modal-body">
                     <p>Proven through **BITP2303 Database Programming** and applied in the **PIMS System** back-end for data retrieval and donation tracking.</p>
-                    <a href="#projects" class="btn btn-primary btn-sm rounded-3" onclick="bootstrap.Modal.getInstance(document.getElementById('modalSQL')).hide();">View PIMS Project</a>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- Modal PHP -->
     <div class="modal fade" id="modalPHP" tabindex="-1">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
@@ -506,79 +494,44 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
                 </div>
                 <div class="modal-body">
-                    <p>Primary language used for the **PIMS (Sistem Pengurusan Pusat Islam)** web application, handling all server-side logic and database connectivity.</p>
+                    <p>Primary language used for the **PIMS** web application, handling all server-side logic and database connectivity.</p>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- Modal SEO -->
-    <div class="modal fade" id="modalSEO" tabindex="-1">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title">Technical SEO Audit</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-                </div>
-                <div class="modal-body">
-                    <p>Honed during my internship at **Wallmaster Digital Sdn. Bhd.**, where I resolved 79+ missing meta descriptions and fixed broken site URLs.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Add more modals here for R, Oracle, Azure, etc. using the same structure -->
-
-    <!-- ======= Contact ======= -->
-<!-- ======= Contact ======= -->
+    <!-- ======= Contact Footer ======= -->
     <footer id="contact" class="py-5 bg-white border-top">
         <div class="container text-center">
             <h2 class="fw-bold mb-4">Initialize Connection</h2>
             <p class="text-muted">Currently seeking Internship Placements: September — March</p>
             
             <div class="d-flex justify-content-center align-items-center gap-4 my-4">
-                <!-- Email -->
-                <a href="mailto:sufianabaharom@gmail.com" class="text-dark fs-3" title="Email Me">
-                    <i class="bi bi-envelope-at-fill"></i>
-                </a>
-
-                <!-- LinkedIn -->
-                <a href="https://www.linkedin.com/in/sufianabaharom/" class="text-dark fs-3" title="LinkedIn Profile">
-                    <i class="bi bi-linkedin"></i>
-                </a>
-
-                <!-- GitHub (Link to your main profile only) -->
-                <a href="https://github.com/sufiana-hub" class="text-dark fs-3" title="GitHub Repositories">
-                    <i class="bi bi-github"></i>
-                </a>
-
-                <!-- Credly (Using a Patch Check icon which represents digital badges) -->
-                <a href="https://www.credly.com/users/sufiana-binti-baharom/badges" class="text-dark fs-3" title="View My Digital Badges">
-                    <i class="bi bi-patch-check-fill text-primary"></i> 
-                </a>
+                <a href="mailto:sufianabaharom@gmail.com" class="text-dark fs-3" title="Email Me"><i class="bi bi-envelope-at-fill"></i></a>
+                <a href="https://www.linkedin.com/in/sufianabaharom/" class="text-dark fs-3" title="LinkedIn Profile"><i class="bi bi-linkedin"></i></a>
+                <a href="https://github.com/sufiana-hub" class="text-dark fs-3" title="GitHub Repositories"><i class="bi bi-github"></i></a>
+                <a href="https://www.credly.com/users/sufiana-binti-baharom/badges" class="text-dark fs-3" title="View My Digital Badges"><i class="bi bi-patch-check-fill text-primary"></i></a>
             </div>
             
             <p class="small text-muted">&copy; 2026 Sufiana Adlin. Data Professional.</p>
         </div>
-    </footer> <!-- Fixed the "footeer" typo here too -->
-    
-
-<script>
-function deleteResumeButton() {
-    // This removes the button and the link from the visitor's view immediately
-    const element = document.getElementById("resume-container");
-    element.style.transition = "0.5s";
-    element.style.opacity = "0";
-    setTimeout(() => { element.remove(); }, 500);
-    alert("Resume link has been hidden from this session.");
-}
-</script>
+    </footer>
 
     <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init({ duration: 1000, once: true });
+        
+        function deleteResumeButton() {
+            const element = document.getElementById("resume-container");
+            if(element) {
+                element.style.transition = "0.5s";
+                element.style.opacity = "0";
+                setTimeout(() => { element.remove(); }, 500);
+                alert("Resume link has been hidden from this session.");
+            }
+        }
     </script>
 </body>
 </html>
