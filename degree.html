@@ -3,13 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sufiana Adlin | Portfolio</title>
+    <title>Sufiana Adlin | Degree Portfolio</title>
     
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
     <!-- Icons -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
     <!-- Framework -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Animation -->
@@ -50,7 +49,7 @@
         .nav-link:hover { color: var(--accent-blue) !important; }
 
         /* Hero */
-        #hero { padding: 140px 0 100px; }
+        #hero { padding: 140px 0 80px; }
         .hero-label { color: var(--accent-blue); font-weight: 700; font-size: 0.75rem; letter-spacing: 2px; }
         .hero-name { font-size: 5.5rem; font-weight: 800; letter-spacing: -3px; line-height: 0.9; margin: 20px 0; }
         .hero-name span { color: var(--accent-blue); }
@@ -92,14 +91,7 @@
             background: var(--accent-blue); border-radius: 20px 20px 0 0;
         }
 
-        /* Skill Tags - Interactive */
-        .skill-box {
-            background: #fafafa;
-            border: 1px solid var(--card-border);
-            border-radius: 20px;
-            padding: 30px;
-            height: 100%;
-        }
+        /* Skill Tags */
         .skill-tag {
             background: var(--bg-white);
             border: 1px solid var(--card-border);
@@ -110,15 +102,6 @@
             color: var(--text-main);
             margin: 0 4px 8px 0;
             display: inline-block;
-            cursor: pointer;
-            transition: 0.2s;
-            text-decoration: none;
-        }
-        .skill-tag:hover {
-            background: var(--accent-blue);
-            color: white;
-            border-color: var(--accent-blue);
-            transform: scale(1.05);
         }
 
         /* Buttons */
@@ -130,33 +113,20 @@
             font-weight: 700;
             border: none;
             transition: 0.3s;
+            text-decoration: none;
         }
-        .btn-dark-custom:hover { background: var(--accent-blue); transform: translateY(-2px); }
+        .btn-dark-custom:hover { background: var(--accent-blue); transform: translateY(-2px); color: white;}
 
-        /* Modal Custom Styling */
-        .modal-content { border-radius: 24px; border: none; padding: 20px; }
-        .modal-header { border-bottom: none; }
-        .modal-title { font-weight: 800; letter-spacing: -1px; }
+        /* Feature Highlight Box */
+        .highlight-box {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            border-left: 5px solid var(--accent-blue);
+        }
 
         @media (max-width: 991px) {
             .hero-name { font-size: 3.5rem; }
             .profile-img-container { margin: 40px auto 0; }
         }
-
-        .nav-pills .nav-link {
-    color: #666;
-    background: transparent;
-    border-radius: 0;
-    padding: 0 20px 10px 0;
-    margin-right: 20px;
-    border-bottom: 3px solid transparent;
-}
-.nav-pills .nav-link.active {
-    color: #121212;
-    background: transparent;
-    border-bottom: 3px solid var(--accent-blue);
-}
-
     </style>
 </head>
 <body>
@@ -164,18 +134,16 @@
     <!-- ======= Navigation ======= -->
     <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container">
-            <a class="navbar-brand fw-bold" href="#">sufiana-hub<span>.</span></a>
+            <a class="navbar-brand fw-bold" href="index.html">sufiana-hub<span>.</span></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <div class="ms-auto d-flex flex-column flex-lg-row">
-                <a class="nav-link" href="index.html">Projects</a>
-                <a class="nav-link" href="index.html">Skills</a>
-                <a class="nav-link" href="index.html">Education</a>
-                <a class="nav-link" href="index.html">Contact</a>
-                <a class="nav-link" href="diploma.html">Diploma</a>
-                <a class="nav-link" href="degree.html">Degree</a>
+                    <a class="nav-link" href="index.html#projects">Projects</a>
+                    <a class="nav-link" href="index.html#skills">Skills</a>
+                    <a class="nav-link" href="diploma.html">Diploma</a>
+                    <a class="nav-link text-primary" href="degree.html">Degree</a>
                 </div>
             </div>
         </div>
@@ -186,74 +154,212 @@
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-7" data-aos="fade-up">
-                    <span class="hero-label">— PORTFOLIO</span>
-                    <h1 class="hero-name">Sufiana Adlin <br><span>Baharom</span></h1>
-                    <div class="location-badge mb-4"><i class="bi bi-geo-alt"></i> Shah Alam, Selangor</div>
-                    <p class="fs-5 text-muted mb-5 pe-lg-5"> I am a <strong>structured thinker and a final-year database management </strong>student at UTeM, 
-                        currently <strong>seeking a professional internship </strong>from September to March. I bridge the <strong>gap between complex data systems and business solutions. </strong>
-                    </p>
-                    <class="d-flex gap-3>
-                        <a href="mailto:sufianabaharom@gmail.com" class="btn-dark-custom">Hire Me</a>
-                        <a href="https://www.linkedin.com/in/sufianabaharom/" target="_blank" class="btn btn-outline-secondary rounded-4 px-4 fw-bold">LinkedIn ↗</a>
-                        <!-- Added the 'download' attribute -->
-                        <a href="SUFIANA_CV.pdf" download="Sufiana_Adlin_Resume" class="btn btn-outline-secondary rounded-4 px-4 fw-bold"> Download Resume <i class="bi bi-download"></i></a>
-                    </class=>
-                </div>
-                <div class="col-lg-5" data-aos="zoom-in">
-                    <div class="profile-img-container shadow-lg">
-                        <!-- Replace with your actual image file -->
-                        <img src="PORTFOLIO_PROFILE.jpg" alt="Sufiana Adlin" class="img-fluid" onerror="this.src='https://via.placeholder.com/400x400?text=Profile+Image'">
-                    </div>
+                    <span class="hero-label">— BACHELOR'S DEGREE PORTFOLIO</span>
+                    <h1 class="hero-name">Academic <br><span>Deep Dive</span></h1>
+                    <div class="location-badge mb-4"><i class="bi bi-mortarboard-fill me-2"></i> UTeM, Melaka</div>
+                    <p class="fs-5 text-muted mb-5 pe-lg-5"> Detailed breakdown of my fast-tracked <strong>Bachelor of Computer Science (Database Management)</strong> degree, showcasing heavy credit loads, rigorous database interoperability testing, and real-world system architecture.</p>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- ======= Degree Deep-Dive Section ======= -->
+    <section id="degree-details" class="py-4 bg-light">
+        <div class="container">
+            
+            <!-- 1. ACADEMIC COURSEWORK & ACCELERATED TIMELINE -->
+            <div class="mb-5" data-aos="fade-up">
+                
+                <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-end mb-4">
+                    <div>
+                        <h2 class="fw-extrabold display-6 fw-bold mb-2">Academic Coursework</h2>
+                        <div style="width: 60px; height: 4px; background: var(--accent-blue); margin-bottom: 15px;"></div>
+                        <h5 class="fw-bold text-dark">Bachelor of Computer Science (Database Management) With Honours</h5>
+                        <p class="text-muted mb-0">Universiti Teknikal Malaysia Melaka (UTeM)</p>
+                    </div>
+                    <div class="text-md-end mt-3 mt-md-0">
+                        <span class="badge bg-primary fs-5 mb-2 px-3 py-2 rounded-3 shadow-sm">Current CGPA: 3.28</span>
+                        <p class="text-muted fw-bold mb-0"><i class="bi bi-journals me-2"></i>Total Accumulated Credits: 85</p>
+                    </div>
+                </div>
 
-    <!-- ======= Contact ======= -->
-<!-- ======= Contact ======= -->
+                <!-- Highlight Box: Explaining the Fast-Track & Credit Load -->
+                <div class="highlight-box rounded-4 p-4 mb-4 shadow-sm">
+                    <h5 class="fw-bold text-dark mb-3"><i class="bi bi-rocket-takeoff-fill text-primary me-2"></i> Accelerated 2.5-Year Program & Rigorous Workload</h5>
+                    <p class="text-muted mb-2">My degree program spans only <strong>2 years and 6 months</strong> due to a 28-credit exemption transferred from my previous diploma studies[cite: 11].</p>
+                    <p class="text-muted mb-0">To maintain this fast-track pace, I successfully manage an exceptionally heavy academic load of <strong>17 to 20 credits per semester</strong>[cite: 8]. While taking 20 credits per semester[cite: 12, 13] makes it mathematically difficult to attain standard awards like the Dean's List, it has drastically accelerated my ability to architect robust database systems under extreme time constraints and pressure.</p>
+                </div>
+
+                <!-- Bootstrap Accordion for Semesters -->
+                <div class="accordion shadow-sm rounded-4 overflow-hidden" id="degreeAccordion">
+                    
+                    <!-- Semester 1 -->
+                    <div class="accordion-item border-0 border-bottom">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed fw-bold bg-white" type="button" data-bs-toggle="collapse" data-bs-target="#sem1">
+                                Semester 1 (1-2024/2025) — GPA: 3.22 | 17 Credits
+                            </button>
+                        </h2>
+                        <div id="sem1" class="accordion-collapse collapse" data-bs-parent="#degreeAccordion">
+                            <div class="accordion-body bg-light">
+                                <p class="small text-muted mb-3"><strong class="text-dark">Key Takeaway:</strong> Established core theoretical database concepts, mastering programmatic database design and user-centric interaction models[cite: 11].</p>
+                                <div class="d-flex flex-wrap gap-2">
+                                    <span class="skill-tag border-0 shadow-sm">Database Design (B+)</span>
+                                    <span class="skill-tag border-0 shadow-sm">Human-Computer Interaction (B+)</span>
+                                    <span class="skill-tag border-0 shadow-sm">Database Programming (C+)</span>
+                                    <span class="skill-tag border-0 shadow-sm">Statistics and Probability (B-)</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Semester 2 -->
+                    <div class="accordion-item border-0 border-bottom">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed fw-bold bg-white" type="button" data-bs-toggle="collapse" data-bs-target="#sem2">
+                                Semester 2 (2-2024/2025) — GPA: 3.15 | 20 Credits
+                            </button>
+                        </h2>
+                        <div id="sem2" class="accordion-collapse collapse" data-bs-parent="#degreeAccordion">
+                            <div class="accordion-body bg-light">
+                                <p class="small text-muted mb-3"><strong class="text-dark">Key Takeaway:</strong> Successfully balanced a massive 20-credit workload[cite: 12] while delivering "Workshop 1," a foundational C++ system digitizing manual dorm logs using 3NF normalization[cite: 6].</p>
+                                <div class="d-flex flex-wrap gap-2">
+                                    <span class="skill-tag border-0 shadow-sm">Workshop I (A)</span>
+                                    <span class="skill-tag border-0 shadow-sm">Artificial Intelligence (B+)</span>
+                                    <span class="skill-tag border-0 shadow-sm">Software Engineering (B-)</span>
+                                    <span class="skill-tag border-0 shadow-sm">Data Communication & Networking (C+)</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Semester 3 -->
+                    <div class="accordion-item border-0">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button fw-bold bg-white" type="button" data-bs-toggle="collapse" data-bs-target="#sem3">
+                                Semester 3 (1-2025/2026) — GPA: 3.46 | 20 Credits
+                            </button>
+                        </h2>
+                        <div id="sem3" class="accordion-collapse collapse show" data-bs-parent="#degreeAccordion">
+                            <div class="accordion-body bg-light">
+                                <p class="small text-muted mb-3"><strong class="text-dark">Key Takeaway:</strong> Achieved my highest GPA to date while handling another 20-credit semester[cite: 13]. Architected the complex PPMS system to test database interoperability across MySQL, PostgreSQL, and SQL Server[cite: 7].</p>
+                                <div class="d-flex flex-wrap gap-2">
+                                    <span class="skill-tag border-0 shadow-sm bg-primary text-white">Data Warehousing & BI (A)</span>
+                                    <span class="skill-tag border-0 shadow-sm">Workshop II (A-)</span>
+                                    <span class="skill-tag border-0 shadow-sm">Software Project Management (A-)</span>
+                                    <span class="skill-tag border-0 shadow-sm">IT and Database Security (B+)</span>
+                                    <span class="skill-tag border-0 shadow-sm">Operating System (B)</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- 2. APPLIED SOLUTIONS & PROOF OF WORK -->
+            <div class="mt-5 pt-4">
+                <div class="mb-4">
+                    <h2 class="fw-extrabold display-6 fw-bold mb-2">Applied Degree Projects & Proof</h2>
+                    <div style="width: 60px; height: 4px; background: var(--accent-blue); margin-bottom: 15px;"></div>
+                    <p class="text-muted">Official documentation and deep dives into the software systems developed during my degree.</p>
+                </div>
+
+                <div class="row g-4">
+                    
+                    <!-- Pharmacy Project (Workshop 2) -->
+                    <div class="col-lg-6" data-aos="fade-up">
+                        <div class="project-card h-100 p-0 overflow-hidden d-flex flex-column">
+                            <img src="pharmacy_project.jpg" alt="Pharmacy System Interface" class="img-fluid w-100" style="height: 220px; object-fit: cover;" onerror="this.src='https://via.placeholder.com/800x400?text=Pharmacy+Prescription+System'">
+                            <div class="p-4 flex-grow-1 d-flex flex-column">
+                                <span class="badge bg-warning text-dark mb-3 align-self-start">WORKSHOP 2</span>
+                                <h4 class="fw-bold">Pharmacy & Prescription Management System (PPMS)</h4>
+                                
+                                <!-- Problem/Solution/Takeaway Section -->
+                                <div class="mt-3 mb-4 rounded-3 bg-light p-3 border flex-grow-1">
+                                    <p class="small mb-2"><strong class="text-danger">Problem:</strong> Conventional pharmacies struggle with unconnected systems, causing inventory errors, missing patient records, and miscommunication[cite: 7].</p>
+                                    <p class="small mb-2"><strong class="text-success">Solution:</strong> Engineered a robust 5-module system encompassing Inventory, Prescription, Patient Info, Sales, and Analytics[cite: 5, 7].</p>
+                                    <p class="small mb-0"><strong class="text-primary">Key Takeaway:</strong> Successfully demonstrated true database interoperability by ensuring the system ran flawlessly across PostgreSQL, MySQL, and Microsoft SQL Server platforms[cite: 7].</p>
+                                </div>
+
+                                <div class="mt-auto">
+                                    <div class="d-flex flex-column gap-2 mb-3">
+                                        <a href="BITU3923_FINALREPORT_PHARMACY (6).pdf" target="_blank" class="btn btn-warning text-dark rounded-4 px-3 fw-bold shadow-sm d-flex justify-content-between align-items-center">
+                                            <span><i class="bi bi-file-earmark-pdf-fill me-2"></i> View Final Report (PDF)</span>
+                                            <i class="bi bi-box-arrow-up-right"></i>
+                                        </a>
+                                        <a href="B032410816_WORKSHOP2.pdf" target="_blank" class="btn btn-outline-dark rounded-4 px-3 fw-bold d-flex justify-content-between align-items-center">
+                                            <span><i class="bi bi-journal-code me-2"></i> View Logbook & Code Logic</span>
+                                            <i class="bi bi-box-arrow-up-right"></i>
+                                        </a>
+                                    </div>
+                                    <div class="mt-2">
+                                        <span class="skill-tag">MySQL</span>
+                                        <span class="skill-tag">PostgreSQL</span>
+                                        <span class="skill-tag">SQL Server</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- LDS Project (Workshop 1) -->
+                    <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+                        <div class="project-card h-100 p-0 overflow-hidden d-flex flex-column" style="border-top-color: #10b981;">
+                            <img src="lestari_logic_project.jpg" alt="Lestari Dormitory System" class="img-fluid w-100" style="height: 220px; object-fit: cover;" onerror="this.src='https://via.placeholder.com/800x400?text=Lestari+Dormitory+System'">
+                            <div class="p-4 flex-grow-1 d-flex flex-column">
+                                <span class="badge bg-success mb-3 text-white align-self-start">WORKSHOP 1</span>
+                                <h4 class="fw-bold">Lestari Dormitory System (LDS)</h4>
+                                
+                                <!-- Problem/Solution/Takeaway Section -->
+                                <div class="mt-3 mb-4 rounded-3 bg-light p-3 border flex-grow-1">
+                                    <p class="small mb-2"><strong class="text-danger">Problem:</strong> Weak, manual reporting mechanisms using paper forms led to disorganized data and severe delays in dormitory maintenance operations[cite: 6].</p>
+                                    <p class="small mb-2"><strong class="text-success">Solution:</strong> Developed a centralized standalone system in C++ featuring role-based secure login, prioritized request tracking, and automated report generation[cite: 6].</p>
+                                    <p class="small mb-0"><strong class="text-primary">Key Takeaway:</strong> Mastered the translation of raw business requirements into a strict Third Normal Form (3NF) relational database model using Entity-Relationship Diagrams[cite: 6].</p>
+                                </div>
+
+                                <div class="mt-auto">
+                                    <div class="d-flex flex-column gap-2 mb-3">
+                                        <a href="FINAL WORSHOP1_B032410816.pdf" target="_blank" class="btn btn-success text-white rounded-4 px-3 fw-bold shadow-sm d-flex justify-content-between align-items-center">
+                                            <span><i class="bi bi-file-earmark-pdf-fill me-2"></i> View Project Report (PDF)</span>
+                                            <i class="bi bi-box-arrow-up-right"></i>
+                                        </a>
+                                        <a href="https://github.com/sufiana-hub/Lestari_Dormitory_System.git" target="_blank" class="btn btn-outline-secondary rounded-4 px-3 fw-bold d-flex justify-content-between align-items-center">
+                                            <span><i class="bi bi-github me-2"></i> View Source Code</span>
+                                            <i class="bi bi-box-arrow-up-right"></i>
+                                        </a>
+                                    </div>
+                                    <div class="mt-2">
+                                        <span class="skill-tag">C++</span>
+                                        <span class="skill-tag">3NF Normalization</span>
+                                        <span class="skill-tag">ERD</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======= Contact Footer ======= -->
     <footer id="contact" class="py-5 bg-white border-top">
         <div class="container text-center">
             <h2 class="fw-bold mb-4">Initialize Connection</h2>
             <p class="text-muted">Currently seeking Internship Placements: September — March</p>
             
             <div class="d-flex justify-content-center align-items-center gap-4 my-4">
-                <!-- Email -->
-                <a href="mailto:sufianabaharom@gmail.com" class="text-dark fs-3" title="Email Me">
-                    <i class="bi bi-envelope-at-fill"></i>
-                </a>
-
-                <!-- LinkedIn -->
-                <a href="https://www.linkedin.com/in/sufianabaharom/" class="text-dark fs-3" title="LinkedIn Profile">
-                    <i class="bi bi-linkedin"></i>
-                </a>
-
-                <!-- GitHub (Link to your main profile only) -->
-                <a href="https://github.com/sufiana-hub" class="text-dark fs-3" title="GitHub Repositories">
-                    <i class="bi bi-github"></i>
-                </a>
-
-                <!-- Credly (Using a Patch Check icon which represents digital badges) -->
-                <a href="https://www.credly.com/users/sufiana-binti-baharom/badges" class="text-dark fs-3" title="View My Digital Badges">
-                    <i class="bi bi-patch-check-fill text-primary"></i> 
-                </a>
+                <a href="mailto:sufianabaharom@gmail.com" class="text-dark fs-3" title="Email Me"><i class="bi bi-envelope-at-fill"></i></a>
+                <a href="https://www.linkedin.com/in/sufianabaharom/" class="text-dark fs-3" title="LinkedIn Profile"><i class="bi bi-linkedin"></i></a>
+                <a href="https://github.com/sufiana-hub" class="text-dark fs-3" title="GitHub Repositories"><i class="bi bi-github"></i></a>
+                <a href="https://www.credly.com/users/sufiana-binti-baharom/badges" class="text-dark fs-3" title="View My Digital Badges"><i class="bi bi-patch-check-fill text-primary"></i></a>
             </div>
             
             <p class="small text-muted">&copy; 2026 Sufiana Adlin. Data Professional.</p>
         </div>
-    </footer> <!-- Fixed the "footeer" typo here too -->
-    
-
-<script>
-function deleteResumeButton() {
-    // This removes the button and the link from the visitor's view immediately
-    const element = document.getElementById("resume-container");
-    element.style.transition = "0.5s";
-    element.style.opacity = "0";
-    setTimeout(() => { element.remove(); }, 500);
-    alert("Resume link has been hidden from this session.");
-}
-</script>
+    </footer>
 
     <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
