@@ -157,11 +157,6 @@
     border-bottom: 3px solid var(--accent-blue);
 }
 
-/* Add this to your style block */
-.tight-section {
-    padding-top: 2rem !important;
-    padding-bottom: 2rem !important;
-}
     </style>
 </head>
 <body>
@@ -210,154 +205,195 @@
     </section>
 
 <!-- ======= Projects Section ======= -->
-<!-- ======= Projects Section ======= -->
-<section id="projects" class="py-4 bg-light">
-        <div class="container">
-            <div class="mb-4">
-                <h2 class="fw-extrabold display-5 fw-bold">Experience & Projects</h2>
-                <div style="width: 60px; height: 4px; background: var(--accent-blue); margin-top: 10px;"></div>
+<section id="projects" class="py-5">
+    <div class="container">
+        
+        <!-- Tab Navigation -->
+        <ul class="nav nav-pills mb-4" id="pills-tab" role="tablist">
+            <li class="nav-item" role="presentation">
+                <button class="nav-link active fw-bold" id="pills-projects-tab" data-bs-toggle="pill" data-bs-target="#pills-projects" type="button" role="tab">Projects</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link fw-bold" id="pills-diploma-tab" data-bs-toggle="pill" data-bs-target="#pills-diploma" type="button" role="tab">Diploma</button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link fw-bold" id="pills-degree-tab" data-bs-toggle="pill" data-bs-target="#pills-degree" type="button" role="tab">Degree</button>
+            </li>
+        </ul>
+
+        <!-- Tab Content -->
+        <div class="tab-content" id="pills-tabContent">
+            <!-- Projects Content -->
+            <div class="tab-pane fade show active" id="pills-projects" role="tabpanel">
+                <div class="row g-4">
+        <!-- Start of ONE SINGLE ROW -->
+        <div class="row g-4">
+            <!-- Project 1: Lesbot -->
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                <div class="project-card h-100"> <!-- h-100 makes cards equal height -->
+                    <span class="badge bg-warning text-dark mb-3">SYSTEM DEVELOPMENT</span>
+                    <h4 class="fw-bold">Lesbot: Lestari Dormitory System</h4>
+                    <p class="text-muted small">A full-stack, cloud-hosted dormitory solution featuring an NLP Chatbot for automated facility management for Lestari Dormitory UTeM.</p>
+                    <div class="mt-4">
+                        <a href="https://lesbot-lestari-bmdahbahbbeeb2f9.southeastasia-01.azurewebsites.net/" target="_blank" class="btn btn-outline-secondary btn-sm rounded-4 px-3 fw-bold mb-2">LesBot Website ↗</a>
+                        <div class="mt-2">
+                            <span class="skill-tag">Azure</span><span class="skill-tag">PHP</span><span class="skill-tag">ERD</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Project 2: Pharmacy -->
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                <div class="project-card h-100">
+                    <span class="badge bg-warning text-dark mb-3">SYSTEM DEVELOPMENT</span>
+                    <h4 class="fw-bold">Pharmacy & Prescription System</h4>
+                    <p class="text-muted small">A full-stack solution for automated facility management, representing the continuous progress of Workshop 1 logic into a web environment.</p>
+                    <div class="mt-4">
+                        <a href="YOUR_LINK_HERE" target="_blank" class="btn btn-outline-secondary btn-sm rounded-4 px-3 fw-bold mb-2">View System ↗</a>
+                        <div class="mt-2">
+                            <span class="skill-tag">PHP</span><span class="skill-tag">MySQL</span><span class="skill-tag">API</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Project 3: PIMS -->
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                <div class="project-card h-100">
+                    <span class="badge bg-warning text-dark mb-3">SYSTEM DEVELOPMENT</span>
+                    <h4 class="fw-bold">PIMS Islamic Center System</h4>
+                    <p class="text-muted small">A full-stack management system built for Politeknik Balik Pulau to digitize activities and Infaq management processes.</p>
+                    <div class="mt-4">
+                        <a href="https://sufiana-pims-eqehcdfvargnbqh8.southeastasia-01.azurewebsites.net/index.php" target="_blank" class="btn btn-outline-secondary btn-sm rounded-4 px-3 fw-bold mb-2">PIMS Website ↗</a>
+                        <div class="mt-2">
+                            <span class="skill-tag">PHP</span><span class="skill-tag">MySQL</span><span class="skill-tag">Bootstrap</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Project 4: Workshop 1 -->
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
+                <div class="project-card h-100" style="border-top-color: #10b981;">
+                    <span class="badge bg-success mb-3 text-white">WORKSHOP 1</span>
+                    <h4 class="fw-bold">Lestari Dormitory (Logic Design)</h4>
+                    <p class="text-muted small">Developed a foundational system using <strong>C++</strong> to digitize manual logging, focused on architecting ERDs and applying 3NF Normalization.</p>
+                    <div class="mt-4">
+                        <a href="https://github.com/sufiana-hub/Lestari_Dormitory_System.git" target="_blank" class="btn btn-outline-secondary btn-sm rounded-4 px-3 fw-bold mb-2">LDS Github Code ↗</a>
+                        <div class="mt-2">
+                            <span class="skill-tag">C++ Logic</span><span class="skill-tag">Normalization</span><span class="skill-tag">ERD</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Project 5: Wallmaster -->
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
+                <div class="project-card h-100" style="border-top-color: #10b981;">
+                    <span class="badge bg-success mb-3 text-white">SEO & IT OPERATIONS</span>
+                    <h4 class="fw-bold">Wallmaster Digital Audit</h4>
+                    <p class="text-muted small">Conducted technical SEO audits, fixing 404 errors and optimizing WordPress back-ends to improve site ranking and performance.</p>
+                    <div class="mt-4">
+                        <a href="https://www.wallmaster.com.my/" target="_blank" class="btn btn-outline-secondary btn-sm rounded-4 px-3 fw-bold mb-2">Wallmaster Website ↗</a>
+                        <div class="mt-2">
+                            <span class="skill-tag">WordPress</span><span class="skill-tag">SEO Audit</span><span class="skill-tag">Analytics</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> <!-- End of ONE SINGLE ROW -->
+                </div>
             </div>
 
-            <ul class="nav nav-pills mb-4" id="pills-tab" role="tablist">
-                <li class="nav-item" role="presentation">
-                    <button class="nav-link active fw-bold" id="pills-projects-tab" data-bs-toggle="pill" data-bs-target="#pills-projects" type="button" role="tab">All Projects</button>
-                </li>
-                <li class="nav-item" role="presentation">
-                    <button class="nav-link fw-bold" id="pills-diploma-tab" data-bs-toggle="pill" data-bs-target="#pills-diploma" type="button" role="tab">Diploma</button>
-                </li>
-                <li class="nav-item" role="presentation">
-                    <button class="nav-link fw-bold" id="pills-degree-tab" data-bs-toggle="pill" data-bs-target="#pills-degree" type="button" role="tab">Degree</button>
-                </li>
-            </ul>
 
-            <div class="tab-content" id="pills-tabContent">
-                
-                <div class="tab-pane fade show active" id="pills-projects" role="tabpanel">
-                    <div class="row g-3">
-                        
-                        <div class="col-lg-4 col-md-6" data-aos="fade-up">
-                            <div class="project-card h-100">
-                                <span class="badge bg-warning text-dark mb-3">SYSTEM DEVELOPMENT</span>
-                                <h4 class="fw-bold">Lesbot: Lestari Dormitory System</h4>
-                                <p class="text-muted small">A full-stack, cloud-hosted dormitory solution featuring an NLP Chatbot for automated facility management for Lestari Dormitory UTeM.</p>
-                                <div class="mt-4">
-                                    <a href="https://lesbot-lestari-bmdahbahbbeeb2f9.southeastasia-01.azurewebsites.net/" target="_blank" class="btn btn-outline-secondary btn-sm rounded-4 px-3 fw-bold mb-2">LesBot Website ↗</a>
-                                    <div class="mt-2"><span class="skill-tag">Azure</span><span class="skill-tag">PHP</span><span class="skill-tag">ERD</span></div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
-                            <div class="project-card h-100">
-                                <span class="badge bg-warning text-dark mb-3">SYSTEM DEVELOPMENT</span>
-                                <h4 class="fw-bold">Pharmacy & Prescription System</h4>
-                                <p class="text-muted small">A full-stack solution for automated facility management, representing the continuous progress of Workshop 1 logic into a web environment.</p>
-                                <div class="mt-4">
-                                    <a href="#" target="_blank" class="btn btn-outline-secondary btn-sm rounded-4 px-3 fw-bold mb-2">View System ↗</a>
-                                    <div class="mt-2"><span class="skill-tag">PHP</span><span class="skill-tag">MySQL</span><span class="skill-tag">API</span></div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
-                            <div class="project-card h-100">
-                                <span class="badge bg-warning text-dark mb-3">SYSTEM DEVELOPMENT</span>
-                                <h4 class="fw-bold">PIMS Islamic Center System</h4>
-                                <p class="text-muted small">A full-stack management system built for Politeknik Balik Pulau to digitize activities and Infaq management processes.</p>
-                                <div class="mt-4">
-                                    <a href="https://sufiana-pims-eqehcdfvargnbqh8.southeastasia-01.azurewebsites.net/index.php" target="_blank" class="btn btn-outline-secondary btn-sm rounded-4 px-3 fw-bold mb-2">PIMS Website ↗</a>
-                                    <div class="mt-2"><span class="skill-tag">PHP</span><span class="skill-tag">MySQL</span><span class="skill-tag">Bootstrap</span></div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
-                            <div class="project-card h-100" style="border-top-color: #10b981;">
-                                <span class="badge bg-success mb-3 text-white">WORKSHOP 1</span>
-                                <h4 class="fw-bold">Lestari Dormitory (Logic Design)</h4>
-                                <p class="text-muted small">Developed a foundational system using <strong>C++</strong> to digitize manual logging, focused on architecting ERDs and applying 3NF Normalization.</p>
-                                <div class="mt-4">
-                                    <a href="https://github.com/sufiana-hub/Lestari_Dormitory_System.git" target="_blank" class="btn btn-outline-secondary btn-sm rounded-4 px-3 fw-bold mb-2">LDS Github Code ↗</a>
-                                    <div class="mt-2"><span class="skill-tag">C++ Logic</span><span class="skill-tag">Normalization</span><span class="skill-tag">ERD</span></div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
-                            <div class="project-card h-100" style="border-top-color: #10b981;">
-                                <span class="badge bg-success mb-3 text-white">SEO & IT OPERATIONS</span>
-                                <h4 class="fw-bold">Wallmaster Digital Audit</h4>
-                                <p class="text-muted small">Conducted technical SEO audits, fixing 404 errors and optimizing WordPress back-ends to improve site ranking and performance.</p>
-                                <div class="mt-4">
-                                    <a href="https://www.wallmaster.com.my/" target="_blank" class="btn btn-outline-secondary btn-sm rounded-4 px-3 fw-bold mb-2">Wallmaster Website ↗</a>
-                                    <div class="mt-2"><span class="skill-tag">WordPress</span><span class="skill-tag">SEO Audit</span><span class="skill-tag">Analytics</span></div>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-
-                <div class="tab-pane fade" id="pills-diploma" role="tabpanel">
-                    <div class="row g-3">
-                        <div class="col-12"><p class="mb-2 text-muted fw-bold">Projects completed during Diploma in Information Technology:</p></div>
-                        
-                        <div class="col-lg-4 col-md-6">
-                            <div class="project-card h-100">
-                                <span class="badge bg-warning text-dark mb-3">SYSTEM DEVELOPMENT</span>
-                                <h4 class="fw-bold">PIMS Islamic Center System</h4>
-                                <p class="text-muted small">A full-stack management system built for Politeknik Balik Pulau.</p>
-                                <div class="mt-4"><a href="#" class="btn btn-outline-secondary btn-sm rounded-4 px-3 fw-bold mb-2">PIMS Website ↗</a></div>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-4 col-md-6">
-                            <div class="project-card h-100" style="border-top-color: #10b981;">
-                                <span class="badge bg-success mb-3 text-white">SEO & IT OPERATIONS</span>
-                                <h4 class="fw-bold">Wallmaster Digital Audit</h4>
-                                <p class="text-muted small">Conducted technical SEO audits and optimized WordPress back-ends.</p>
-                                <div class="mt-4"><a href="#" class="btn btn-outline-secondary btn-sm rounded-4 px-3 fw-bold mb-2">Wallmaster Website ↗</a></div>
-                            </div>
+            <!-- Diploma Content -->
+            <div class="tab-pane fade" id="pills-diploma" role="tabpanel">
+        <!-- Start of ONE SINGLE ROW -->
+        <div class="row g-4">
+            <!-- Project 3: PIMS -->
+            <div class="col-md-12"><p>PIMS, Wallmaster</p></div>
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                <div class="project-card h-100">
+                    <span class="badge bg-warning text-dark mb-3">SYSTEM DEVELOPMENT</span>
+                    <h4 class="fw-bold">PIMS Islamic Center System</h4>
+                    <p class="text-muted small">A full-stack management system built for Politeknik Balik Pulau to digitize activities and Infaq management processes.</p>
+                    <div class="mt-4">
+                        <a href="https://sufiana-pims-eqehcdfvargnbqh8.southeastasia-01.azurewebsites.net/index.php" target="_blank" class="btn btn-outline-secondary btn-sm rounded-4 px-3 fw-bold mb-2">PIMS Website ↗</a>
+                        <div class="mt-2">
+                            <span class="skill-tag">PHP</span><span class="skill-tag">MySQL</span><span class="skill-tag">Bootstrap</span>
                         </div>
                     </div>
                 </div>
-
-                <div class="tab-pane fade" id="pills-degree" role="tabpanel">
-                    <div class="row g-3">
-                        <div class="col-12"><p class="mb-2 text-muted fw-bold">Projects completed during Bachelor of Computer Science (Database Management):</p></div>
-                        
-                        <div class="col-lg-4 col-md-6">
-                            <div class="project-card h-100">
-                                <span class="badge bg-warning text-dark mb-3">SYSTEM DEVELOPMENT</span>
-                                <h4 class="fw-bold">Lesbot: Lestari Dormitory System</h4>
-                                <p class="text-muted small">A full-stack, cloud-hosted dormitory solution featuring an NLP Chatbot.</p>
-                                <div class="mt-4"><a href="#" class="btn btn-outline-secondary btn-sm rounded-4 px-3 fw-bold mb-2">LesBot Website ↗</a></div>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-4 col-md-6">
-                            <div class="project-card h-100">
-                                <span class="badge bg-warning text-dark mb-3">SYSTEM DEVELOPMENT</span>
-                                <h4 class="fw-bold">Pharmacy & Prescription System</h4>
-                                <p class="text-muted small">A full-stack solution for automated facility management.</p>
-                                <div class="mt-4"><a href="#" class="btn btn-outline-secondary btn-sm rounded-4 px-3 fw-bold mb-2">View System ↗</a></div>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-4 col-md-6">
-                            <div class="project-card h-100" style="border-top-color: #10b981;">
-                                <span class="badge bg-success mb-3 text-white">WORKSHOP 1</span>
-                                <h4 class="fw-bold">Lestari Dormitory (Logic Design)</h4>
-                                <p class="text-muted small">Developed a foundational system using C++ and 3NF Normalization.</p>
-                                <div class="mt-4"><a href="#" class="btn btn-outline-secondary btn-sm rounded-4 px-3 fw-bold mb-2">LDS Github Code ↗</a></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
             </div>
-        </div>
-    </section>
+            <!-- Project 5: Wallmaster -->
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
+                <div class="project-card h-100" style="border-top-color: #10b981;">
+                    <span class="badge bg-success mb-3 text-white">SEO & IT OPERATIONS</span>
+                    <h4 class="fw-bold">Wallmaster Digital Audit</h4>
+                    <p class="text-muted small">Conducted technical SEO audits, fixing 404 errors and optimizing WordPress back-ends to improve site ranking and performance.</p>
+                    <div class="mt-4">
+                        <a href="https://www.wallmaster.com.my/" target="_blank" class="btn btn-outline-secondary btn-sm rounded-4 px-3 fw-bold mb-2">Wallmaster Website ↗</a>
+                        <div class="mt-2">
+                            <span class="skill-tag">WordPress</span><span class="skill-tag">SEO Audit</span><span class="skill-tag">Analytics</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> <!-- End of ONE SINGLE ROW -->
+                </div>
+            </div>
+
+
+            <!-- Degree Content -->
+            <div class="tab-pane fade" id="pills-degree" role="tabpanel">
+                <div class="row g-4">
+        <!-- Start of ONE SINGLE ROW -->
+        <div class="row g-4">
+            <!-- Project 1: Lesbot -->
+            <div class="col-md-12"><p>Workshop1, Workshop2, Lesbot, Lestari, FYP, </p></div>
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                <div class="project-card h-100"> <!-- h-100 makes cards equal height -->
+                    <span class="badge bg-warning text-dark mb-3">SYSTEM DEVELOPMENT</span>
+                    <h4 class="fw-bold">Lesbot: Lestari Dormitory System</h4>
+                    <p class="text-muted small">A full-stack, cloud-hosted dormitory solution featuring an NLP Chatbot for automated facility management for Lestari Dormitory UTeM.</p>
+                    <div class="mt-4">
+                        <a href="https://lesbot-lestari-bmdahbahbbeeb2f9.southeastasia-01.azurewebsites.net/" target="_blank" class="btn btn-outline-secondary btn-sm rounded-4 px-3 fw-bold mb-2">LesBot Website ↗</a>
+                        <div class="mt-2">
+                            <span class="skill-tag">Azure</span><span class="skill-tag">PHP</span><span class="skill-tag">ERD</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 2: Pharmacy -->
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                <div class="project-card h-100">
+                    <span class="badge bg-warning text-dark mb-3">SYSTEM DEVELOPMENT</span>
+                    <h4 class="fw-bold">Pharmacy & Prescription System</h4>
+                    <p class="text-muted small">A full-stack solution for automated facility management, representing the continuous progress of Workshop 1 logic into a web environment.</p>
+                    <div class="mt-4">
+                        <a href="YOUR_LINK_HERE" target="_blank" class="btn btn-outline-secondary btn-sm rounded-4 px-3 fw-bold mb-2">View System ↗</a>
+                        <div class="mt-2">
+                            <span class="skill-tag">PHP</span><span class="skill-tag">MySQL</span><span class="skill-tag">API</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 4: Workshop 1 -->
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
+                <div class="project-card h-100" style="border-top-color: #10b981;">
+                    <span class="badge bg-success mb-3 text-white">WORKSHOP 1</span>
+                    <h4 class="fw-bold">Lestari Dormitory (Logic Design)</h4>
+                    <p class="text-muted small">Developed a foundational system using <strong>C++</strong> to digitize manual logging, focused on architecting ERDs and applying 3NF Normalization.</p>
+                    <div class="mt-4">
+                        <a href="https://github.com/sufiana-hub/Lestari_Dormitory_System.git" target="_blank" class="btn btn-outline-secondary btn-sm rounded-4 px-3 fw-bold mb-2">LDS Github Code ↗</a>
+                        <div class="mt-2">
+                            <span class="skill-tag">C++ Logic</span><span class="skill-tag">Normalization</span><span class="skill-tag">ERD</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> <!-- End of ONE SINGLE ROW -->
+    </div>
+</section>
 
 
     <!-- ======= Skills Section - REDIRECT TO MODALS ======= -->
